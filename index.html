@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elephant Solutions</title>
+<meta name="description" content="Creamos páginas web con un asistente de inteligencia artificial que responde consultas, guía a tus clientes y recibe solicitudes de cotización, 24/7.">
+<meta name="theme-color" content="#111312">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Logo pixelado del elefante, reutilizado en todo el sitio -->
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+  <symbol id="elephant" viewBox="-1 -1 20 16">
+    <path d="M6 0h7v1h-7z M4 1h2v1h-2z M13 1h2v1h-2z M3 2h1v1h-1z M15 2h1v1h-1z M2 3h1v2h-1z M16 3h1v10h-1z M1 5h1v9h-1z M14 7h1v7h-1z M5 9h5v1h-5z M4 10h1v4h-1z M10 10h1v4h-1z M15 13h1v1h-1z M13 3h1v1h-1z M10 1h1v2h-1z M9 3h1v3h-1z M10 6h1v1h-1z M11 7h2v1h-2z"/>
+  </symbol>
+  <symbol id="arrow" viewBox="0 0 16 16">
+    <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<div class="page">
+
+  <section id="inicio" class="hero">
+    <video class="hero__video" autoplay muted loop playsinline disablepictureinpicture preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Elephant Solutions, inicio">
+        <svg viewBox="-1 -1 20 16" width="40" height="32" shape-rendering="crispEdges" aria-hidden="true"><use href="#elephant" fill="#FFFFFF"/><path d="M-1 14h20v1h-20z" fill="#5BB38E"/></svg>
+        <span class="brand__word"><b>ELEPHANT</b><span>SOLUTIONS</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#inicio" aria-current="page">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn--light btn--sm" href="https://wa.me/56984077467?text=Hola%2C%20quiero%20agendar%20una%20reuni%C3%B3n">Agenda una reunión</a>
+    </header>
+
+    <main class="hero__main">
+      <div class="hero__copy">
+        <h1 class="float">Tu negocio,<br><span class="soft">atendido 24/7<span class="pxdot" aria-hidden="true"></span></span></h1>
+        <p>Creamos páginas web con un asistente de inteligencia artificial que responde consultas, guía a tus clientes y recibe solicitudes de cotización, mientras tu equipo se enfoca en lo importante.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light btn--arrow" href="https://wa.me/56984077467?text=Hola%2C%20quiero%20mi%20p%C3%A1gina">Hablemos<span class="btn__icon" aria-hidden="true"><svg class="arrow-icon"><use href="#arrow"/></svg></span></a>
+          <a class="link" href="#servicios">Nuestros servicios</a>
+        </div>
+      </div>
+
+      <article class="chat-card" aria-label="Vista previa del asistente de IA">
+        <div class="chat-card__top">
+          <span class="chat-card__title">ASISTENTE IA</span>
+          <span class="chat-card__status">En línea</span>
+        </div>
+        <div class="chat-card__log" data-chat>
+          <p class="msg msg--user" data-chat-step="user">Hola, ¿tienen hora disponible esta semana?</p>
+          <div class="msg-row msg-row--typing" data-chat-step="typing" aria-label="El asistente está escribiendo" hidden>
+            <span class="avatar" aria-hidden="true"></span>
+            <span class="msg msg--typing"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+          </div>
+          <div class="msg-row" data-chat-step="bot">
+            <span class="avatar" aria-hidden="true"><svg viewBox="-1 -1 20 16" width="18" height="14" shape-rendering="crispEdges"><use href="#elephant" fill="#FFFFFF"/><path d="M-1 14h20v1h-20z" fill="#FFFFFF"/></svg></span>
+            <p class="msg msg--bot">¡Hola! Sí, el jueves a las 11:00 o el viernes a las 16:00. ¿Cuál te acomoda?</p>
+          </div>
+        </div>
+        <a class="chat-card__cta" href="https://wa.me/56984077467?text=Hola%2C%20quiero%20un%20asistente%20as%C3%AD%20para%20mi%20negocio">Quiero uno para mi negocio<svg width="14" height="14" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </article>
+    </main>
+
+    <div class="intro" aria-hidden="true">
+      <div class="intro__word"><span data-typed></span><span class="intro__cursor"></span></div>
+    </div>
+  </section>
+
+  <section id="problema" class="section problem">
+    <div class="section-head rv">
+      <span class="label">¿TE SUENA?</span>
+      <h2>Cada consulta sin respuesta es un cliente que se va<span class="pxdot" aria-hidden="true"></span></h2>
+    </div>
+    <div class="pillars">
+      <article class="pillar rv">
+        <span class="pillar__icon" aria-hidden="true"><svg viewBox="-1 -1 14 14" width="26" height="26" shape-rendering="crispEdges"><path d="M3 0h6v1h-6z M1 1h2v1h-2z M9 1h2v1h-2z M1 2h1v1h-1z M10 2h1v1h-1z M0 3h1v6h-1z M11 3h1v6h-1z M1 9h1v1h-1z M10 9h1v1h-1z M1 10h2v1h-2z M9 10h2v1h-2z M3 11h6v1h-6z M5 3h1v4h-1z M6 6h3v1h-3z" fill="#8FCBB0"/></svg></span>
+        <h3>Te escriben fuera de horario</h3>
+        <p>Las consultas llegan de noche o el fin de semana y se enfrían antes de que alcances a responder.</p>
+      </article>
+      <article class="pillar rv rv--d1">
+        <span class="pillar__icon" aria-hidden="true"><svg viewBox="-1 -1 14 14" width="26" height="26" shape-rendering="crispEdges"><path d="M0 0h7v1h-7z M0 1h1v4h-1z M6 1h1v4h-1z M0 5h7v1h-7z M1 6h1v1h-1z M2 2h3v1h-3z M2 3h2v1h-2z M5 6h7v1h-7z M5 7h1v3h-1z M11 7h1v3h-1z M5 10h7v1h-7z M10 11h1v1h-1z M7 8h3v1h-3z" fill="#8FCBB0"/></svg></span>
+        <h3>Respondes lo mismo todo el día</h3>
+        <p>Precios, horarios, dirección, disponibilidad. Las mismas preguntas se llevan horas de tu semana.</p>
+      </article>
+      <article class="pillar rv rv--d2">
+        <span class="pillar__icon" aria-hidden="true"><svg viewBox="-1 -1 14 14" width="26" height="26" shape-rendering="crispEdges"><path d="M2 0h3v1h-3z M1 1h1v1h-1z M5 1h1v1h-1z M0 2h1v3h-1z M6 2h1v3h-1z M1 5h1v1h-1z M5 5h1v1h-1z M2 6h3v1h-3z M6 6h1v1h-1z M7 7h2v1h-2z M8 8h2v1h-2z M9 9h2v1h-2z M10 10h2v1h-2z" fill="#8FCBB0"/></svg></span>
+        <h3>No te encuentran en internet</h3>
+        <p>Si un cliente te busca y no encuentra cómo contactarte, termina escribiéndole a la competencia.</p>
+      </article>
+    </div>
+    <div class="problem__close rv">
+      <p>Con Elephant Solutions, tu página <span class="hl">atiende, resuelve dudas y recibe solicitudes por ti</span>, a cualquier hora.</p>
+      <div class="ideal">
+        <span>Ideal para</span>
+        <ul class="chips" aria-label="Tipos de negocio">
+          <li>Laboratorios</li>
+          <li>Clínicas y consultas</li>
+          <li>Centros de estética</li>
+          <li>Servicios técnicos</li>
+          <li>Comercios</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="section services">
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker">
+        <span>ELEPHANT · ELEPHANT · ELEPHANT · ELEPHANT ·</span>
+        <span>ELEPHANT · ELEPHANT · ELEPHANT · ELEPHANT ·</span>
+      </div>
+    </div>
+
+    <div class="section-head rv">
+      <span class="label">SERVICIOS</span>
+      <h2>Tecnología que trabaja por tu negocio<span class="pxdot" aria-hidden="true"></span></h2>
+      <p>Elige un servicio o combínalos. Todo pensado para que atiendas mejor a tus clientes con menos trabajo manual.</p>
+    </div>
+
+    <div class="gallery rv">
+      <article class="gallery__item" tabindex="0">
+        <img class="gallery__img" src="assets/servicio-pagina-web.jpg" alt="" loading="lazy">
+        <div class="gallery__shade" aria-hidden="true"></div>
+        <div class="gallery__body">
+          <span class="gallery__icon" aria-hidden="true"><svg viewBox="-1 -1 14 14" width="26" height="26" shape-rendering="crispEdges"><path d="M0 0h12v1h-12z M0 1h1v7h-1z M11 1h1v7h-1z M0 8h12v1h-12z M5 9h2v2h-2z M3 11h6v1h-6z" fill="#FFFFFF"/></svg></span>
+          <h3>Página web</h3>
+          <p class="gallery__desc">Un sitio profesional, rápido y adaptado a celulares, con la información que tus clientes buscan: qué haces, cómo trabajas y cómo contactarte.</p>
+        </div>
+      </article>
+      <article class="gallery__item gallery__item--green" tabindex="0">
+        <img class="gallery__img" src="assets/servicio-chatbot.jpg" alt="" loading="lazy">
+        <div class="gallery__shade" aria-hidden="true"></div>
+        <div class="gallery__body">
+          <span class="gallery__icon" aria-hidden="true"><svg viewBox="-1 -1 14 14" width="26" height="26" shape-rendering="crispEdges"><path d="M1 0h10v1h-10z M0 1h1v6h-1z M11 1h1v6h-1z M1 7h3v1h-3z M6 7h5v1h-5z M4 8h2v1h-2z M4 9h1v1h-1z M3 3h2v2h-2z M7 3h2v2h-2z" fill="#FFFFFF"/></svg></span>
+          <h3>Chatbot con IA</h3>
+          <p class="gallery__desc">Un asistente que responde las preguntas frecuentes de tus clientes a cualquier hora, los orienta y recibe sus solicitudes para que tu equipo solo tenga que dar el siguiente paso.</p>
+        </div>
+      </article>
+      <article class="gallery__item gallery__item--dark" tabindex="0">
+        <img class="gallery__img" src="assets/servicio-automatizaciones.jpg" alt="" loading="lazy">
+        <div class="gallery__shade" aria-hidden="true"></div>
+        <div class="gallery__body">
+          <span class="gallery__icon" aria-hidden="true"><svg viewBox="-1 -1 14 14" width="26" height="26" shape-rendering="crispEdges"><path d="M1 2h8v1h-8z M8 0h1v5h-1z M9 1h1v3h-1z M10 2h1v1h-1z M3 9h8v1h-8z M3 7h1v5h-1z M2 8h1v3h-1z M1 9h1v1h-1z" fill="#FFFFFF"/></svg></span>
+          <h3>Automatizaciones</h3>
+          <p class="gallery__desc">Conectamos tus herramientas para que las tareas repetitivas se hagan solas: registro de solicitudes, respuestas, recordatorios y reportes.</p>
+        </div>
+      </article>
+    </div>
+
+    <a class="btn btn--light btn--md" href="https://wa.me/56984077467">Conversemos sobre tu negocio</a>
+  </section>
+
+  <section class="section statement">
+    <p class="statement__text rv">Cada página que creamos está pensada para que tu negocio responda, oriente y venda, incluso cuando no estás. <span class="hl">Tú descansas. Tu página sigue trabajando.</span></p>
+    <div class="stats rv" data-stats>
+      <div class="stat">
+        <span class="num" data-count="7">7</span>
+        <span>días hábiles para tener tu página lista</span>
+      </div>
+      <div class="stat">
+        <span class="num">24/7</span>
+        <span>tu asistente atendiendo clientes</span>
+      </div>
+      <div class="stat">
+        <span class="num">1</span>
+        <span>reunión para empezar</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="section how">
+    <div class="section-head rv">
+      <span class="label">CÓMO FUNCIONA</span>
+      <h2>Tu página lista en 3 pasos<span class="pxdot" aria-hidden="true"></span></h2>
+    </div>
+    <div class="steps">
+      <article class="step rv">
+        <span class="num">01</span>
+        <h3>Conversamos</h3>
+        <p>Una reunión corta para conocer tu negocio, tus clientes y las preguntas que más se repiten.</p>
+      </article>
+      <article class="step rv rv--d1">
+        <span class="num">02</span>
+        <h3>Construimos</h3>
+        <p>Armamos tu página y entrenamos a tu asistente con tu información. Lista en 7 días hábiles.</p>
+      </article>
+      <article class="step rv rv--d2">
+        <span class="num">03</span>
+        <h3>Lanzamos y acompañamos</h3>
+        <p>Publicamos con tu dominio, ajustamos lo necesario y nos encargamos de la mantención mensual.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="preguntas" class="section faq">
+    <div class="section-head rv">
+      <span class="label">PREGUNTAS FRECUENTES</span>
+      <h2>Lo que más nos preguntan<span class="pxdot" aria-hidden="true"></span></h2>
+    </div>
+    <div class="faq__list" data-faq>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="true" aria-controls="faq-1"><span>¿Cuánto tarda tener mi página?</span><span class="faq__icon" aria-hidden="true"></span></button>
+        <p class="faq__a" id="faq-1">7 días hábiles, contados desde que recibimos tu contenido: logo, fotos, servicios con precios, horario y número de WhatsApp.</p>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-2"><span>¿Qué incluye?</span><span class="faq__icon" aria-hidden="true"></span></button>
+        <p class="faq__a" id="faq-2" hidden>Una página de hasta cuatro secciones adaptada a celular, botón de WhatsApp, un asistente que responde las preguntas frecuentes, dominio .cl y hosting el primer año, y una ronda de ajustes.</p>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-3"><span>¿Cómo empiezo?</span><span class="faq__icon" aria-hidden="true"></span></button>
+        <p class="faq__a" id="faq-3" hidden>Escríbenos por WhatsApp, agendamos una reunión corta para conocer tu negocio y te enviamos una propuesta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="contact__box rv">
+      <svg class="contact__mark" viewBox="-1 -1 20 16" shape-rendering="crispEdges" aria-hidden="true"><use href="#elephant" fill="#FFFFFF"/></svg>
+      <span class="label">CONTACTO</span>
+      <h2>Tu página puede estar lista en 7 días hábiles<span class="pxdot" aria-hidden="true"></span></h2>
+      <p>Cuéntanos de tu negocio en una reunión corta y te enviamos una propuesta a tu medida.</p>
+      <div class="contact__actions">
+        <a class="btn btn--light btn--lg btn--arrow" href="https://wa.me/56984077467?text=Hola%2C%20quiero%20mi%20p%C3%A1gina">Escríbenos por WhatsApp<span class="btn__icon" aria-hidden="true"><svg class="arrow-icon"><use href="#arrow"/></svg></span></a>
+        <a class="btn btn--outline btn--lg" href="mailto:elephant.solutions.s@gmail.com">Enviar un correo</a>
+      </div>
+      <p class="contact__meta">+56 9 8407 7467 · elephant.solutions.s@gmail.com · Santiago, Chile</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__brand">
+      <div class="pixel-logo" role="img" aria-label="Logo de Elephant Solutions" data-pixel-logo></div>
+      <span class="site-footer__word"><b>ELEPHANT</b><span>SOLUTIONS</span></span>
+    </div>
+    <div class="site-footer__info">
+      <span>Elephant Solutions SpA · Santiago, Chile</span>
+      <a href="mailto:elephant.solutions.s@gmail.com">elephant.solutions.s@gmail.com</a>
+      <a class="privacy" href="privacidad.html">Política de privacidad</a>
+      <span>© 2026 Elephant Solutions SpA</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
