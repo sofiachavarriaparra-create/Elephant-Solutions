@@ -126,19 +126,6 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 .btn--line{border:1px solid currentColor}
 .btn-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
 
-/* ---------- Splash ---------- */
-.splash{display:none}
-.js .splash{display:block;position:fixed;inset:0;z-index:150;background:#FAF6F0;transition:opacity .7s var(--ease)}
-.splash.is-out{opacity:0;pointer-events:none}
-.splash-count{position:absolute;left:clamp(14px,3vw,40px);bottom:clamp(6px,2vw,24px);font-weight:700;
-  font-size:clamp(120px,36vw,400px);line-height:.8;letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:var(--ink)}
-.splash-logo{position:absolute;left:clamp(14px,3vw,40px);bottom:clamp(18px,3vw,40px);opacity:0;transition:opacity .2s}
-.splash-logo .logo-word{font-size:clamp(84px,24vw,280px)}
-.splash-logo .logo-sub{font-size:clamp(11px,2.6vw,30px);letter-spacing:.42em;margin-top:.6em}
-.splash.is-logo .splash-count{opacity:0}
-.splash.is-logo .splash-logo{opacity:1}
-.splash-lock{overflow:hidden}
-
 /* ---------- Navbar ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:60;height:var(--nav);display:flex;align-items:center;justify-content:space-between;
   padding:0 calc(var(--gap) + 14px);background:rgba(245,239,230,.8);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%)}
@@ -221,7 +208,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
   .hero-side .btn{min-height:54px;padding:0 28px;font-size:16px}
 }
 
-/* Hero: entrada después del splash */
+/* Hero: entrada al cargar */
 .js .hero [data-hero]{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease) var(--d,0ms),transform .6s var(--ease) var(--d,0ms)}
 .js .hero [data-hero].is-in{opacity:1;transform:none}
 
@@ -389,7 +376,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 .chat-open .chat-fab .dot{transform:scale(0);opacity:0}
 .chat-open .chat-fab .x{opacity:1;transform:none}
 @keyframes pulse{0%{transform:scale(.6);opacity:.9}80%,100%{transform:scale(1.5);opacity:0}}
-.js .splash-lock .chat-fab,.menu-open .chat-fab,.fab-away:not(.chat-open) .chat-fab{opacity:0;pointer-events:none;transform:scale(.8)}
+.menu-open .chat-fab,.fab-away:not(.chat-open) .chat-fab{opacity:0;pointer-events:none;transform:scale(.8)}
 .chat{position:fixed;right:12px;bottom:84px;z-index:90;width:min(370px,calc(100vw - 24px));max-height:min(560px,calc(100svh - 110px));
   background:var(--ivory);border-radius:var(--r);box-shadow:0 24px 60px rgba(14,13,12,.24),0 0 0 1px rgba(14,13,12,.06);
   display:flex;flex-direction:column;overflow:hidden;transform-origin:bottom right;
@@ -443,12 +430,6 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
   Datos por confirmar: precios $[X], horario, dominio, testimonios reales.
 -->
 <a class="skip" href="#contenido">Saltar al contenido</a>
-
-<!-- Splash -->
-<div class="splash" id="splash" aria-hidden="true">
-  <div class="splash-count" id="splashCount">0</div>
-  <div class="splash-logo logo"><span class="logo-word">SIENA</span><span class="logo-sub">PELUQUERÍA</span></div>
-</div>
 
 <!-- Navbar -->
 <header class="nav" id="nav">
@@ -738,33 +719,6 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
   // Mensajes de WhatsApp por servicio
   d.querySelectorAll("[data-wa]").forEach((a) => (a.href = wa(a.dataset.wa)));
 
-  /* ---------------- Splash ---------------- */
-  const splash = d.getElementById("splash");
-  const count = d.getElementById("splashCount");
-  root.classList.add("splash-lock");
-  const finishSplash = () => {
-    splash.classList.add("is-logo");
-    setTimeout(() => {
-      splash.classList.add("is-out");
-      root.classList.remove("splash-lock");
-      revealHero();
-      setTimeout(() => splash.remove(), 750);
-    }, 300);
-  };
-  if (reduce.matches) {
-    count.textContent = "100";
-    setTimeout(finishSplash, 200);
-  } else {
-    const DUR = 2000, t0 = performance.now();
-    const ease = (x) => (x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
-    const tick = (now) => {
-      const p = Math.min(1, (now - t0) / DUR);
-      count.textContent = Math.round(ease(p) * 100);
-      p < 1 ? requestAnimationFrame(tick) : finishSplash();
-    };
-    requestAnimationFrame(tick);
-  }
-
   /* ---------------- Hero: máscara de cards ---------------- */
   const hero = d.getElementById("hero");
   const svg = hero.querySelector(".hero-mask");
@@ -792,12 +746,13 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
   ro.observe(hero); windows.forEach((w) => ro.observe(w));
   drawMask();
 
-  function revealHero() {
+  // Entrada del hero al cargar (en el cuadro siguiente para que corra la transición)
+  requestAnimationFrame(() => requestAnimationFrame(() => {
     hero.querySelectorAll("[data-hero]").forEach((el, i) => {
       el.style.setProperty("--d", `${i * 120}ms`);
       el.classList.add("is-in");
     });
-  }
+  }));
 
   /* ---------------- Video ping-pong ---------------- */
   const video = d.getElementById("heroVideo");
