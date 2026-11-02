@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es-CL" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Siena Peluquería | Peluquería y barbería en Macul</title>
+<meta name="description" content="Peluquería y barbería en Macul: color, corte, barbería, manicure y estética con L'Oréal Professionnel. Av. Macul 3578, interior Unimarc. Agenda por WhatsApp.">
+<meta name="theme-color" content="#F5EFE6">
+<!-- MAQUETA para revisión con la clienta: no indexar. Quitar esta línea al publicar en el dominio final. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- PENDIENTE: reemplazar [dominio] por el dominio final (canonical, og:url, og:image y JSON-LD necesitan URL absoluta). -->
+<link rel="canonical" href="https://[dominio].cl/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="Siena Peluquería">
+<meta property="og:title" content="Siena Peluquería | Peluquería y barbería en Macul">
+<meta property="og:description" content="Cabello, barbería, manicure y estética con productos L'Oréal Professionnel. Av. Macul 3578, interior Unimarc, con estacionamiento subterráneo gratis.">
+<meta property="og:url" content="https://[dominio].cl/">
+<meta property="og:image" content="https://[dominio].cl/assets/hero-poster.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tipografías: Open Sauce One (enlace indicado + respaldo Fontsource para Regular y Bold) y Fraunces Italic -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://db.onlinewebfonts.com/c/1cd1e7d71e048159076fd90b39846902?family=Open+Sauce+One">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap">
+<link rel="preload" as="image" href="assets/hero-poster.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Siena Peluquería",
+  "description": "Peluquería, barbería, manicure y estética en Macul. Salón L'Oréal Professionnel.",
+  "url": "https://[dominio].cl/",
+  "image": "https://[dominio].cl/assets/hero-poster.jpg",
+  "telephone": "+56945821631",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Macul 3578, interior Unimarc",
+    "addressLocality": "Macul",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "sameAs": ["https://instagram.com/sienapeluqueria"],
+  "amenityFeature": {
+    "@type": "LocationFeatureSpecification",
+    "name": "Estacionamiento subterráneo gratis",
+    "value": true
+  },
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corte y peinado"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Color, mechas y balayage"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hidratación y tratamientos"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Barbería"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manicure y diseño de uñas"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Estética"}}
+  ]
+}
+</script>
+
+<style>
+/* ---------- Fuentes (respaldo si el enlace de onlinewebfonts no trae el Bold) ---------- */
+@font-face{font-family:"Open Sauce One";font-style:normal;font-weight:400;font-display:swap;
+  src:url("https://cdn.jsdelivr.net/fontsource/fonts/open-sauce-one@latest/latin-400-normal.woff2") format("woff2");}
+@font-face{font-family:"Open Sauce One";font-style:normal;font-weight:700;font-display:swap;
+  src:url("https://cdn.jsdelivr.net/fontsource/fonts/open-sauce-one@latest/latin-700-normal.woff2") format("woff2");}
+
+/* ---------- Sistema ---------- */
+:root{
+  --ink:#0E0D0C; --gold:#E6A13A; --sienna:#B4562A; --ivory:#F5EFE6; --stone:#E2DBD0; --white:#FFFFFF;
+  --g1:#F0B54A; --g2:#DD7A26;
+  --muted:rgba(14,13,12,.68);
+  --gap:6px; --r:12px; --nav:64px; --pad:20px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --sans:"Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+}
+@media (min-width:768px){
+  :root{--gap:8px; --r:16px; --nav:72px; --pad:40px;}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img,video,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:.9}
+ul{list-style:none;margin:0;padding:0}
+section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--sienna);outline-offset:3px;border-radius:6px}
+.on-dark :focus-visible,.hero :focus-visible{outline-color:var(--gold)}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px}
+.skip:focus{top:12px}
+
+/* Palabra acento: Fraunces Italic. Dorado sobre oscuro; siena tostado sobre claro (AA en texto grande). */
+.acc{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--sienna);font-optical-sizing:auto}
+.acc--gold,.on-dark .acc{color:var(--gold)}
+
+/* ---------- Logo ---------- */
+.logo{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;position:relative}
+.logo-word{font-weight:700;font-size:24px;letter-spacing:.01em;line-height:.82;
+  background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo-sub{font-size:7.6px;font-weight:700;letter-spacing:.345em;margin-top:5px;color:var(--ink)}
+.logo--framed{padding:10px 12px}
+.logo--framed::before,.logo--framed::after{content:"";position:absolute;width:12px;height:12px;border:0 solid #fff}
+.logo--framed::before{top:0;right:0;border-top-width:1px;border-right-width:1px}
+.logo--framed::after{bottom:0;left:0;border-bottom-width:1px;border-left-width:1px}
+.logo--framed .logo-sub{color:#fff}
+
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;
+  font-weight:700;font-size:15px;letter-spacing:-.005em;white-space:nowrap;transition:transform .4s var(--ease),background-color .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn--ink{background:var(--ink);color:#fff}
+.btn--ink:hover{background:#2a2622}
+.btn--white{background:#fff;color:var(--ink)}
+.btn--line{border:1px solid currentColor}
+.btn-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+
+/* ---------- Splash ---------- */
+.splash{display:none}
+.js .splash{display:block;position:fixed;inset:0;z-index:150;background:#FAF6F0;transition:opacity .7s var(--ease)}
+.splash.is-out{opacity:0;pointer-events:none}
+.splash-count{position:absolute;left:clamp(14px,3vw,40px);bottom:clamp(6px,2vw,24px);font-weight:700;
+  font-size:clamp(120px,36vw,400px);line-height:.8;letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.splash-logo{position:absolute;left:clamp(14px,3vw,40px);bottom:clamp(18px,3vw,40px);opacity:0;transition:opacity .2s}
+.splash-logo .logo-word{font-size:clamp(84px,24vw,280px)}
+.splash-logo .logo-sub{font-size:clamp(11px,2.6vw,30px);letter-spacing:.42em;margin-top:.6em}
+.splash.is-logo .splash-count{opacity:0}
+.splash.is-logo .splash-logo{opacity:1}
+.splash-lock{overflow:hidden}
+
+/* ---------- Navbar ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;height:var(--nav);display:flex;align-items:center;justify-content:space-between;
+  padding:0 calc(var(--gap) + 14px);background:rgba(245,239,230,.8);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%)}
+.nav-links{display:none}
+.nav-toggle{width:44px;height:44px;margin-right:-10px;display:grid;place-items:center;border-radius:50%}
+.burger{position:relative;width:22px;height:12px}
+.burger span{position:absolute;left:0;width:100%;height:1.6px;border-radius:2px;background:var(--ink);transition:transform .5s var(--ease),opacity .3s,top .5s var(--ease)}
+.burger span:nth-child(1){top:0}
+.burger span:nth-child(2){top:5.2px}
+.burger span:nth-child(3){top:10.4px}
+.menu-open .burger span:nth-child(1){top:5.2px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0;transform:scaleX(.2)}
+.menu-open .burger span:nth-child(3){top:5.2px;transform:rotate(-45deg)}
+@media (min-width:768px){
+  .nav{padding:0 calc(var(--gap) + 28px)}
+  .nav-toggle{display:none}
+  .nav-links{display:flex;align-items:center;gap:34px;font-size:15px;font-weight:700}
+  .nav-links a:not(.btn){position:relative;padding:6px 0}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+  .nav-links a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}
+  .nav-links .btn{min-height:44px}
+}
+
+/* Menú móvil */
+.menu-scrim{position:fixed;inset:0;z-index:70;background:rgba(14,13,12,.38);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
+.menu{position:fixed;top:0;right:0;bottom:0;z-index:80;width:min(86vw,380px);background:var(--ivory);padding:calc(var(--nav) + 28px) 24px 28px;
+  display:flex;flex-direction:column;transform:translateX(100%);visibility:hidden;transition:transform .7s var(--ease),visibility .7s;
+  border-radius:var(--r) 0 0 var(--r)}
+.menu-close{position:absolute;top:10px;right:12px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%}
+.menu-close .burger span:nth-child(1){top:5.2px;transform:rotate(45deg)}
+.menu-close .burger span:nth-child(2){opacity:0}
+.menu-close .burger span:nth-child(3){top:5.2px;transform:rotate(-45deg)}
+.menu ul{display:flex;flex-direction:column;gap:6px}
+.menu li{opacity:0;transform:translateX(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu li a{display:block;font-weight:700;font-size:40px;letter-spacing:-.04em;line-height:1;padding:8px 0}
+.menu .btn{margin-top:auto;width:100%;min-height:56px;opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease) .38s,transform .6s var(--ease) .38s}
+.menu-open .menu-scrim{opacity:1;visibility:visible}
+.menu-open .menu{transform:none;visibility:visible}
+.menu-open .menu li{opacity:1;transform:none}
+.menu-open .menu li:nth-child(1){transition-delay:.14s}
+.menu-open .menu li:nth-child(2){transition-delay:.26s}
+.menu-open .menu li:nth-child(3){transition-delay:.38s}
+.menu-open .menu .btn{opacity:1;transform:none;transition-delay:.5s}
+.menu-open{overflow:hidden}
+@media (min-width:768px){.menu,.menu-scrim{display:none}}
+
+/* ---------- Hero: mosaico enmascarado ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:600px;max-height:1200px;
+  display:flex;flex-direction:column;gap:var(--gap);padding:calc(var(--nav) + var(--gap)) var(--gap) var(--gap);isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#d9c3a0}
+.hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero-mask{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
+.hero-mask path{fill:var(--ivory)}
+/* Sin JS: los cards igual se ven (fondo de video recortado por border-radius no aplica) */
+.no-js .hero-mask{display:none}
+
+.hero-bar{flex:none;height:44px;border-radius:var(--r);display:grid;place-items:center;background:rgba(255,250,242,.16)}
+.hero-bar p{font-weight:700;font-size:15px;letter-spacing:-.01em;color:var(--ink)}
+.hero-main{position:relative;flex:1;min-height:0;border-radius:var(--r);padding:var(--pad);color:#fff;
+  display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.hero-main::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(14,13,12,.38) 0%,rgba(14,13,12,0) 28%,rgba(14,13,12,0) 42%,rgba(14,13,12,.72) 100%)}
+.hero-main>*{position:relative;z-index:1}
+.hero-intro{max-width:28ch;font-size:14px;line-height:1.4;color:rgba(255,255,255,.92)}
+.hero-bottom{display:flex;flex-direction:column;gap:22px}
+.hero-label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.88);margin-bottom:14px}
+.hero-title{font-size:clamp(56px,17.4vw,236px);line-height:.82;letter-spacing:-.05em}
+.hero-title .line{display:block}
+.hero-title .acc{font-size:1.06em;line-height:.8;letter-spacing:-.035em;padding-right:.04em}
+.hero-side{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hero-park{font-size:13px;line-height:1.3;color:#fff;max-width:18ch}
+@media (min-width:768px){
+  .hero-bar{height:54px}
+  .hero-bar p{font-size:18px}
+  .hero-intro{font-size:16px}
+  .hero-bottom{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .hero-title{font-size:clamp(88px,13.6vw,236px)}
+  .hero-side{flex-direction:column;align-items:flex-end;text-align:right;gap:14px;flex:none;padding-bottom:.4vw}
+  .hero-park{font-size:14px;max-width:none}
+  .hero-side .btn{min-height:54px;padding:0 28px;font-size:16px}
+}
+
+/* Hero: entrada después del splash */
+.js .hero [data-hero]{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease) var(--d,0ms),transform .6s var(--ease) var(--d,0ms)}
+.js .hero [data-hero].is-in{opacity:1;transform:none}
+
+/* ---------- Revelado al hacer scroll ---------- */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease) var(--d,0ms),transform .6s var(--ease) var(--d,0ms)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+
+/* ---------- Secciones ---------- */
+.mosaic{padding:0 var(--gap)}
+.card{border-radius:var(--r)}
+
+/* Problema */
+.problem{padding:clamp(120px,18vw,240px) 24px clamp(110px,16vw,220px)}
+.problem-inner{max-width:880px;margin:0 auto;text-align:center}
+.problem-lead{font-weight:700;font-size:clamp(30px,4.5vw,60px);line-height:1;letter-spacing:-.04em}
+.problem-lead .acc{font-size:1.08em}
+.problem-body{margin:clamp(28px,3.5vw,44px) auto 0;max-width:34ch;font-size:clamp(19px,2vw,26px);line-height:1.3;letter-spacing:-.015em;color:var(--muted)}
+
+/* Solución */
+.solution{display:grid;gap:var(--gap)}
+.sol-card{background:var(--stone);padding:28px 24px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:56px;min-height:230px}
+.sol-card h3{font-size:clamp(30px,3vw,42px);max-width:9ch}
+.sol-card p{font-size:16px;line-height:1.45;color:var(--muted);max-width:30ch}
+@media (min-width:768px){
+  .solution{grid-template-columns:repeat(3,1fr)}
+  .sol-card{padding:var(--pad);min-height:380px}
+  .sol-card p{font-size:17px}
+}
+
+/* Servicios (bento) */
+.services{margin-top:var(--gap)}
+.srv-grid{display:grid;gap:var(--gap);grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+.srv-head{grid-column:1/-1;background:var(--stone);padding:24px;display:flex;align-items:flex-end}
+.srv-head h2{font-size:clamp(52px,14vw,124px);line-height:.84;letter-spacing:-.05em}
+.srv-head h2 .acc{display:block;font-size:1.05em;line-height:.85}
+.srv{position:relative;overflow:hidden;color:#fff;display:block;isolation:isolate;background:#2a221b}
+.srv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s var(--ease)}
+.srv::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,13,12,.1) 0%,rgba(14,13,12,.08) 40%,rgba(14,13,12,.62) 100%)}
+.srv:hover img{transform:scale(1.04)}
+.srv--01{grid-column:1/-1}
+.srv--02{grid-row:span 2}
+.ph{position:absolute;top:10px;left:10px;font-size:11.5px;font-weight:700;letter-spacing:.01em;
+  padding:5px 9px;border-radius:999px;background:rgba(14,13,12,.55);color:#fff}
+.glass{position:absolute;left:6px;right:6px;bottom:6px;border-radius:calc(var(--r) - 4px);padding:12px 12px 12px 14px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
+  background:rgba(255,255,255,.2);-webkit-backdrop-filter:blur(16px) saturate(130%);backdrop-filter:blur(16px) saturate(130%);
+  border:1px solid rgba(255,255,255,.22);transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s}
+.glass-num{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:6px;font-variant-numeric:tabular-nums;opacity:.85}
+.glass-name{display:block;font-weight:700;font-size:16px;line-height:1.04;letter-spacing:-.02em}
+.glass-go{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;font-size:14px;line-height:1;
+  transition:transform .5s var(--ease)}
+.srv:hover .glass-go,.srv:focus-visible .glass-go{transform:rotate(-45deg)}
+.srv.is-active .glass{background:rgba(255,255,255,.9);color:var(--ink);border-color:rgba(255,255,255,.9)}
+@media (min-width:768px){
+  .srv-grid{grid-template-columns:repeat(4,1fr);grid-template-rows:minmax(260px,auto) 360px 340px;grid-auto-rows:auto}
+  .srv-head{grid-column:1/3;grid-row:1;padding:var(--pad)}
+  .srv-head h2{font-size:clamp(64px,8.2vw,140px)}
+  .srv--01{grid-column:1/3;grid-row:2}
+  .srv--02{grid-column:3/5;grid-row:1/3}
+  .ph{top:14px;left:14px}
+  .glass{left:8px;right:8px;bottom:8px;padding:18px 18px 18px 20px}
+  .glass-num{font-size:12px;margin-bottom:10px}
+  .glass-name{font-size:clamp(20px,1.9vw,28px)}
+  .glass-go{width:40px;height:40px;font-size:16px}
+}
+
+/* Confianza (bloque oscuro) */
+.trust-wrap{margin-top:clamp(100px,14vw,200px)}
+.trust{background:var(--ink);color:#fff;overflow:hidden;display:grid}
+.trust-img{position:relative;height:320px}
+.trust-img img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.trust-body{padding:30px 24px 34px;display:flex;flex-direction:column;gap:40px}
+.trust-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.trust-kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);padding-top:10px}
+.trust-list li{padding:22px 0;border-top:1px solid rgba(230,161,58,.28);display:flex;gap:16px;align-items:baseline}
+.trust-list li:last-child{border-bottom:1px solid rgba(230,161,58,.28)}
+.trust-idx{flex:none;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--gold);font-variant-numeric:tabular-nums;min-width:22px}
+.trust-list p{font-weight:700;font-size:clamp(26px,3.6vw,50px);line-height:.95;letter-spacing:-.04em}
+.trust-list .big{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold);font-size:1.5em;letter-spacing:-.03em;line-height:.8;margin-right:.08em}
+.ig-link{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--gold);
+  padding-bottom:4px;border-bottom:1px solid rgba(230,161,58,.5);transition:gap .4s var(--ease),border-color .3s}
+.ig-link:hover{gap:16px;border-color:var(--gold)}
+@media (min-width:768px){
+  .trust{grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:640px}
+  .trust-img{height:auto}
+  .trust-body{padding:var(--pad) calc(var(--pad) + 16px) var(--pad) clamp(40px,5vw,80px);justify-content:space-between}
+  .trust-list li{padding:28px 0}
+}
+
+/* Testimonios */
+.testimonials{padding:clamp(100px,14vw,200px) 0 0}
+.t-head{padding:0 calc(var(--gap) + 18px);margin-bottom:clamp(28px,4vw,48px)}
+.t-head h2{font-size:clamp(44px,7vw,104px);line-height:.86;letter-spacing:-.05em}
+.t-grid{display:grid;gap:var(--gap)}
+.t-card{background:var(--white);padding:26px 24px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:260px}
+.t-mark{font-family:var(--serif);font-style:italic;font-size:64px;line-height:.5;color:var(--sienna);height:24px}
+.t-card blockquote{margin:0;font-size:clamp(19px,1.7vw,23px);line-height:1.3;letter-spacing:-.015em}
+.t-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;font-size:14px}
+.t-name{font-weight:700}
+.t-tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid rgba(14,13,12,.2);padding:4px 8px;border-radius:999px;white-space:nowrap}
+@media (min-width:768px){
+  .t-grid{grid-template-columns:repeat(3,1fr)}
+  .t-card{padding:32px;min-height:360px}
+}
+
+/* Precios */
+.prices-wrap{margin-top:var(--gap)}
+.prices{background:var(--stone);padding:30px 24px 28px;display:grid;gap:34px}
+.prices h2{font-size:clamp(56px,9vw,140px);line-height:.84;letter-spacing:-.05em}
+.price-list li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:16px 0;border-top:1px solid rgba(14,13,12,.14)}
+.price-list li:last-child{border-bottom:1px solid rgba(14,13,12,.14)}
+.price-list .svc{font-weight:700;font-size:clamp(22px,2.4vw,32px);letter-spacing:-.03em;line-height:1}
+.price-list .amt{font-size:15px;color:var(--muted);white-space:nowrap}
+.price-list .amt b{color:var(--ink);font-size:clamp(20px,2vw,26px);letter-spacing:-.02em}
+.price-note{font-size:14px;line-height:1.45;color:var(--muted);max-width:44ch}
+.price-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+@media (min-width:768px){
+  .prices{grid-template-columns:minmax(0,5fr) minmax(0,7fr);padding:var(--pad);gap:var(--pad);min-height:520px}
+  .prices-left{display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+  .price-list{align-self:end}
+  .price-list li{padding:22px 0}
+}
+
+/* Ubicación */
+.location-wrap{margin-top:clamp(100px,14vw,200px)}
+.location{display:grid;gap:var(--gap)}
+.map{overflow:hidden;background:var(--stone);min-height:340px;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) sepia(.12) contrast(1.02)}
+.loc-card{background:var(--stone);padding:30px 24px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:44px}
+.loc-card h2{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sienna);line-height:1.2;margin-bottom:22px}
+.loc-addr{font-weight:700;font-size:clamp(40px,5.4vw,80px);line-height:.88;letter-spacing:-.05em}
+.loc-addr .acc{display:block;font-size:.9em;margin-top:.06em}
+.loc-meta{font-size:17px;line-height:1.4;margin-top:20px;max-width:30ch}
+@media (min-width:768px){
+  .location{grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:560px}
+  .map{min-height:0}
+  .loc-card{padding:var(--pad)}
+}
+
+/* Footer */
+.footer{padding:clamp(80px,10vw,140px) calc(var(--gap) + 18px) 28px}
+.footer-top{display:grid;gap:36px}
+.footer .logo-word{font-size:clamp(64px,13vw,180px)}
+.footer .logo-sub{font-size:clamp(10px,2vw,27px);letter-spacing:.40em;margin-top:.7em}
+.f-cols{display:grid;gap:24px;grid-template-columns:1fr 1fr;font-size:15px;line-height:1.5}
+.f-cols h3{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;line-height:1.2}
+.f-cols a{border-bottom:1px solid rgba(14,13,12,.25);transition:border-color .3s}
+.f-cols a:hover{border-color:var(--ink)}
+.f-bottom{margin-top:56px;padding-top:18px;border-top:1px solid rgba(14,13,12,.14);display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)}
+@media (min-width:768px){
+  .footer-top{grid-template-columns:auto 1fr;align-items:end;gap:64px}
+  .f-cols{grid-template-columns:repeat(4,auto);justify-content:end;gap:48px}
+}
+
+/* ---------- Asistente IA (maqueta, sin backend) ---------- */
+.chat-fab{position:fixed;right:16px;bottom:16px;z-index:90;width:56px;height:56px;border-radius:50%;background:var(--ink);
+  display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 30px rgba(14,13,12,.28);transition:transform .5s var(--ease),opacity .4s}
+.chat-fab:hover{transform:scale(1.06)}
+.chat-fab .dot{width:12px;height:12px;border-radius:50%;background:var(--gold);position:relative;transition:transform .5s var(--ease),opacity .3s}
+.chat-fab .dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold);animation:pulse 2.4s var(--ease) infinite}
+.chat-fab .x{position:absolute;width:18px;height:18px;opacity:0;transform:rotate(-45deg);transition:transform .5s var(--ease),opacity .3s}
+.chat-fab .x::before,.chat-fab .x::after{content:"";position:absolute;left:0;top:8.2px;width:18px;height:1.6px;background:#fff;border-radius:2px}
+.chat-fab .x::before{transform:rotate(45deg)}
+.chat-fab .x::after{transform:rotate(-45deg)}
+.chat-open .chat-fab .dot{transform:scale(0);opacity:0}
+.chat-open .chat-fab .x{opacity:1;transform:none}
+@keyframes pulse{0%{transform:scale(.6);opacity:.9}80%,100%{transform:scale(1.5);opacity:0}}
+.js .splash-lock .chat-fab,.menu-open .chat-fab,.fab-away:not(.chat-open) .chat-fab{opacity:0;pointer-events:none;transform:scale(.8)}
+.chat{position:fixed;right:12px;bottom:84px;z-index:90;width:min(370px,calc(100vw - 24px));max-height:min(560px,calc(100svh - 110px));
+  background:var(--ivory);border-radius:var(--r);box-shadow:0 24px 60px rgba(14,13,12,.24),0 0 0 1px rgba(14,13,12,.06);
+  display:flex;flex-direction:column;overflow:hidden;transform-origin:bottom right;
+  opacity:0;transform:translateY(12px) scale(.97);visibility:hidden;transition:opacity .4s var(--ease),transform .5s var(--ease),visibility .5s}
+.chat-open .chat{opacity:1;transform:none;visibility:visible}
+.chat-head{display:flex;align-items:center;justify-content:space-between;padding:14px 12px 14px 18px;background:var(--ink);color:#fff}
+.chat-title{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
+.chat-title .btn-dot{width:8px;height:8px}
+.chat-sub{font-size:12px;font-weight:400;color:rgba(255,255,255,.7)}
+.chat-close{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:22px;line-height:1;color:#fff}
+.chat-log{flex:1;overflow-y:auto;padding:16px 14px 6px;display:flex;flex-direction:column;gap:8px;overscroll-behavior:contain}
+.msg{max-width:86%;padding:11px 14px;border-radius:16px;font-size:14.5px;line-height:1.42;animation:msgIn .5s var(--ease) both}
+.msg--bot{background:#fff;border-bottom-left-radius:6px;align-self:flex-start}
+.msg--me{background:var(--ink);color:#fff;border-bottom-right-radius:6px;align-self:flex-end}
+.msg .btn{margin-top:10px;min-height:38px;padding:0 14px;font-size:13.5px}
+.typing{display:inline-flex;gap:4px;padding:14px 16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:rgba(14,13,12,.45);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 16px}
+.chip{min-height:38px;padding:0 14px;border-radius:999px;border:1px solid rgba(14,13,12,.22);font-size:14px;font-weight:700;background:transparent;transition:background-color .3s,color .3s,border-color .3s}
+.chip:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chat-foot{padding:0 14px 12px;font-size:11px;color:var(--muted)}
+@media (min-width:768px){
+  .chat-fab{right:24px;bottom:24px;width:60px;height:60px}
+  .chat{right:24px;bottom:98px}
+}
+
+/* ---------- Movimiento reducido ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-media video{display:none}
+  .js [data-reveal],.js .hero [data-hero]{transform:none;transition:opacity .3s linear}
+  .chat-fab .dot::after{animation:none}
+  .srv img{transition:none}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+</style>
+<noscript><style>[data-reveal],[data-hero]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+
+<body id="top">
+<!--
+  SIENA PELUQUERÍA · landing de una página
+  Archivo único (HTML + CSS + JS en línea). Recursos en /assets:
+    hero.mp4               video del hero, ya exportado en ida y vuelta (ping-pong) → se usa con loop
+    hero-poster.jpg        primer cuadro del video (poster, fallback y prefers-reduced-motion)
+    confianza-cabello.jpg  último cuadro del video, recortado al detalle del pelo
+    srv-0X-*.jpg           MARCADORES: recortes temporales. Reemplazar por fotos reales de Siena.
+  Datos por confirmar: precios $[X], horario, dominio, testimonios reales.
+-->
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- Splash -->
+<div class="splash" id="splash" aria-hidden="true">
+  <div class="splash-count" id="splashCount">0</div>
+  <div class="splash-logo logo"><span class="logo-word">SIENA</span><span class="logo-sub">PELUQUERÍA</span></div>
+</div>
+
+<!-- Navbar -->
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Siena Peluquería, ir al inicio">
+    <span class="logo-word" aria-hidden="true">SIENA</span><span class="logo-sub" aria-hidden="true">PELUQUERÍA</span>
+  </a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#servicios">Servicios</a>
+    <a href="#precios">Precios</a>
+    <a href="#como-llegar">Cómo llegar</a>
+    <a class="btn btn--ink" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda por WhatsApp</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+    <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+</header>
+
+<!-- Menú móvil -->
+<div class="menu-scrim" id="menuScrim" aria-hidden="true"></div>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú" inert>
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú"><span class="burger" aria-hidden="true"><span></span><span></span><span></span></span></button>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#como-llegar">Cómo llegar</a></li>
+  </ul>
+  <a class="btn btn--ink" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda por WhatsApp</a>
+</div>
+
+<main id="contenido">
+
+<!-- 2 · HERO -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/hero-poster.jpg" alt="" width="1280" height="720" fetchpriority="high">
+    <!-- data-pingpong="baked": el archivo ya va hacia adelante y hacia atrás → loop nativo.
+         Si se reemplaza por un clip solo hacia adelante, cambiar a data-pingpong="js". -->
+    <video id="heroVideo" data-pingpong="baked" muted playsinline autoplay loop preload="metadata"
+           poster="assets/hero-poster.jpg" disablepictureinpicture disableremoteplayback>
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <svg class="hero-mask" aria-hidden="true" focusable="false" preserveAspectRatio="none"><path fill-rule="evenodd" d=""/></svg>
+
+  <div class="hero-bar" data-window><p data-hero>Color y mechas</p></div>
+  <div class="hero-bar" data-window><p data-hero>Barbería</p></div>
+  <div class="hero-bar" data-window><p data-hero>Manicure y uñas</p></div>
+
+  <div class="hero-main" data-window>
+    <p class="hero-intro" data-hero>Cabello, barbería, manicure y estética con productos L'Oréal Professionnel.</p>
+    <div class="hero-bottom">
+      <div>
+        <p class="hero-label" data-hero>Peluquería y barbería en Macul</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line" data-hero>Tu mejor</span>
+          <span class="line acc acc--gold" data-hero>versión</span>
+        </h1>
+      </div>
+      <div class="hero-side" data-hero>
+        <a class="btn btn--white" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda por WhatsApp</a>
+        <p class="hero-park">Estacionamiento subterráneo gratis</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · PROBLEMA -->
+<section class="problem" aria-label="Por qué Siena">
+  <div class="problem-inner" data-stagger>
+    <p class="problem-lead" data-reveal>Encontrar a alguien que entienda lo que quieres para tu pelo no debería ser cuestión de <span class="acc">suerte</span>.</p>
+    <p class="problem-body" data-reveal>Un buen resultado depende de los últimos detalles, y esos detalles necesitan tiempo, técnica y buenos productos.</p>
+  </div>
+</section>
+
+<!-- 4 · SOLUCIÓN -->
+<section class="mosaic" aria-label="Lo que nos diferencia">
+  <div class="solution" data-stagger>
+    <article class="sol-card card" data-reveal>
+      <h3>Productos profesionales</h3>
+      <p>Somos salón L'Oréal Professionnel: color, hidratación y tratamientos con productos de salón.</p>
+    </article>
+    <article class="sol-card card" data-reveal>
+      <h3>Todo en un solo lugar</h3>
+      <p>Cabello, barbería, uñas y estética en una misma visita.</p>
+    </article>
+    <article class="sol-card card" data-reveal>
+      <h3>Fácil de llegar</h3>
+      <p>Av. Macul 3578, interior Unimarc, con estacionamiento subterráneo gratis.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 5 · SERVICIOS (bento) -->
+<!-- Las fotos son MARCADORES (etiqueta "foto real de Siena"): reemplazar por fotos reales de cada servicio. -->
+<section class="mosaic services" id="servicios" aria-labelledby="srv-title">
+  <div class="srv-grid" data-stagger>
+    <div class="srv-head card" data-reveal>
+      <h2 id="srv-title">Nuestros <span class="acc">servicios</span></h2>
+    </div>
+
+    <a class="srv srv--01 card is-active" data-reveal target="_blank" rel="noopener"
+       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
+       data-wa="Hola Siena, quiero agendar una hora para corte y peinado">
+      <img src="assets/srv-01-corte.jpg" alt="Foto de referencia: peinado de cabello largo con peineta" loading="lazy" decoding="async" width="900" height="816">
+      <span class="ph">foto real de Siena</span>
+      <span class="glass"><span><span class="glass-num">01</span><span class="glass-name">Corte y peinado</span></span><span class="glass-go" aria-hidden="true">→</span></span>
+    </a>
+
+    <a class="srv srv--02 card" data-reveal target="_blank" rel="noopener"
+       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
+       data-wa="Hola Siena, quiero agendar una hora para color, mechas o balayage">
+      <img src="assets/srv-02-color.jpg" alt="Foto de referencia: cabello con mechas cobrizas iluminado por luz dorada" loading="lazy" decoding="async" width="800" height="1617">
+      <span class="ph">foto real de Siena</span>
+      <span class="glass"><span><span class="glass-num">02</span><span class="glass-name">Color mechas y balayage</span></span><span class="glass-go" aria-hidden="true">→</span></span>
+    </a>
+
+    <a class="srv srv--03 card" data-reveal target="_blank" rel="noopener"
+       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
+       data-wa="Hola Siena, quiero agendar una hora para hidratación o tratamiento">
+      <img src="assets/srv-03-hidratacion.jpg" alt="Foto de referencia: cabello largo con brillo" loading="lazy" decoding="async" width="700" height="615">
+      <span class="ph">foto real de Siena</span>
+      <span class="glass"><span><span class="glass-num">03</span><span class="glass-name">Hidratación y tratamientos</span></span><span class="glass-go" aria-hidden="true">→</span></span>
+    </a>
+
+    <a class="srv srv--04 card" data-reveal target="_blank" rel="noopener"
+       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
+       data-wa="Hola Siena, quiero agendar una hora de barbería">
+      <img src="assets/srv-04-barberia.jpg" alt="Foto de referencia: estilista trabajando" loading="lazy" decoding="async" width="640" height="911">
+      <span class="ph">foto real de Siena</span>
+      <span class="glass"><span><span class="glass-num">04</span><span class="glass-name">Barbería</span></span><span class="glass-go" aria-hidden="true">→</span></span>
+    </a>
+
+    <a class="srv srv--05 card" data-reveal target="_blank" rel="noopener"
+       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
+       data-wa="Hola Siena, quiero agendar una hora de manicure o diseño de uñas">
+      <img src="assets/srv-05-unas.jpg" alt="Foto de referencia: manos de estilista" loading="lazy" decoding="async" width="700" height="647">
+      <span class="ph">foto real de Siena</span>
+      <span class="glass"><span><span class="glass-num">05</span><span class="glass-name">Manicure y diseño de uñas</span></span><span class="glass-go" aria-hidden="true">→</span></span>
+    </a>
+
+    <a class="srv srv--06 card" data-reveal target="_blank" rel="noopener"
+       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
+       data-wa="Hola Siena, quiero agendar una hora de estética">
+      <img src="assets/srv-06-estetica.jpg" alt="Foto de referencia: espejo del salón con luz cálida" loading="lazy" decoding="async" width="700" height="700">
+      <span class="ph">foto real de Siena</span>
+      <span class="glass"><span><span class="glass-num">06</span><span class="glass-name">Estética</span></span><span class="glass-go" aria-hidden="true">→</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- 6 · CONFIANZA (único bloque oscuro) -->
+<section class="mosaic trust-wrap" aria-label="Por qué confiar en Siena">
+  <div class="trust card on-dark" data-reveal>
+    <div class="trust-img">
+      <img src="assets/confianza-cabello.jpg" alt="Detalle de cabello largo castaño con ondas, peinado con luz cálida" loading="lazy" decoding="async" width="700" height="1447">
+    </div>
+    <div class="trust-body">
+      <div class="trust-top">
+        <span class="trust-kicker">Siena · Macul</span>
+        <span class="logo logo--framed" role="img" aria-label="Siena Peluquería"><span class="logo-word" aria-hidden="true">SIENA</span><span class="logo-sub" aria-hidden="true">PELUQUERÍA</span></span>
+      </div>
+      <ul class="trust-list" data-stagger>
+        <li data-reveal><span class="trust-idx" aria-hidden="true">01</span><p>Salón L'Oréal Professionnel</p></li>
+        <li data-reveal><span class="trust-idx" aria-hidden="true">02</span><p><span class="big">+390</span> trabajos en @sienapeluqueria</p></li>
+        <li data-reveal><span class="trust-idx" aria-hidden="true">03</span><p>Agenda exclusiva por WhatsApp</p></li>
+      </ul>
+      <a class="ig-link" href="https://instagram.com/sienapeluqueria" target="_blank" rel="noopener">Ver más en Instagram <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · TESTIMONIOS -->
+<!--
+  ⚠ MARCADORES DE POSICIÓN: estos tres testimonios son de EJEMPLO, no son reseñas reales.
+  Reemplazar por testimonios reales (con permiso de la clienta/cliente) antes de publicar,
+  y quitar la etiqueta "Testimonio de ejemplo".
+-->
+<section class="mosaic testimonials" aria-labelledby="t-title">
+  <div class="t-head" data-reveal><h2 id="t-title">Lo que <span class="acc">dicen</span></h2></div>
+  <div class="t-grid" data-stagger>
+    <figure class="t-card card" data-reveal style="margin:0">
+      <div>
+        <div class="t-mark" aria-hidden="true">“</div>
+        <blockquote><p>Por fin alguien que entendió el tono que quería. El balayage quedó natural y me explicaron cómo cuidarlo en casa.</p></blockquote>
+      </div>
+      <figcaption class="t-meta"><span class="t-name">[Nombre] · [Comuna]</span><span class="t-tag">Testimonio de ejemplo</span></figcaption>
+    </figure>
+    <figure class="t-card card" data-reveal style="margin:0">
+      <div>
+        <div class="t-mark" aria-hidden="true">“</div>
+        <blockquote><p>Voy por corte y barba. Puntuales, prolijos y con estacionamiento ahí mismo. No cambio más.</p></blockquote>
+      </div>
+      <figcaption class="t-meta"><span class="t-name">[Nombre] · [Comuna]</span><span class="t-tag">Testimonio de ejemplo</span></figcaption>
+    </figure>
+    <figure class="t-card card" data-reveal style="margin:0">
+      <div>
+        <div class="t-mark" aria-hidden="true">“</div>
+        <blockquote><p>Me hice la manicure mientras me hacían la hidratación. Salí lista en una sola visita.</p></blockquote>
+      </div>
+      <figcaption class="t-meta"><span class="t-name">[Nombre] · [Comuna]</span><span class="t-tag">Testimonio de ejemplo</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 8 · PRECIOS -->
+<!-- PENDIENTE: reemplazar $[X] por los valores reales. -->
+<section class="mosaic prices-wrap" id="precios" aria-labelledby="p-title">
+  <div class="prices card" data-reveal>
+    <div class="prices-left">
+      <h2 id="p-title">Precios</h2>
+      <div class="price-cta">
+        <a class="btn btn--ink" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda tu hora</a>
+        <p class="price-note">Valores referenciales. El precio final depende del largo y del servicio; te lo confirmamos por WhatsApp.</p>
+      </div>
+    </div>
+    <ul class="price-list" aria-label="Precios desde">
+      <li><span class="svc">Corte</span><span class="amt">desde <b>$[X]</b></span></li>
+      <li><span class="svc">Color</span><span class="amt">desde <b>$[X]</b></span></li>
+      <li><span class="svc">Barbería</span><span class="amt">desde <b>$[X]</b></span></li>
+      <li><span class="svc">Manicure</span><span class="amt">desde <b>$[X]</b></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9 · UBICACIÓN -->
+<section class="mosaic location-wrap" id="como-llegar" aria-labelledby="l-title">
+  <div class="location" data-stagger>
+    <div class="map card" data-reveal>
+      <iframe title="Mapa: Av. Macul 3578, Macul, Santiago" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Av.+Macul+3578,+Macul,+Santiago,+Chile&z=16&output=embed"></iframe>
+    </div>
+    <div class="loc-card card" data-reveal>
+      <div>
+        <h2 id="l-title">Cómo llegar</h2>
+        <p class="loc-addr">Av. Macul 3578 <span class="acc">Macul, Santiago</span></p>
+        <p class="loc-meta">Interior Unimarc · Estacionamiento subterráneo gratis</p>
+      </div>
+      <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&query=Av.%20Macul%203578%2C%20Macul%2C%20Santiago" target="_blank" rel="noopener">Abrir en Google Maps <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <a class="logo" href="#top" aria-label="Siena Peluquería, volver arriba"><span class="logo-word" aria-hidden="true">SIENA</span><span class="logo-sub" aria-hidden="true">PELUQUERÍA</span></a>
+    <div class="f-cols">
+      <div><h3>Dirección</h3><p>Av. Macul 3578, interior Unimarc<br>Macul, Santiago</p></div>
+      <div><h3>WhatsApp</h3><p><a href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener">+56 9 4582 1631</a></p></div>
+      <div><h3>Instagram</h3><p><a href="https://instagram.com/sienapeluqueria" target="_blank" rel="noopener">@sienapeluqueria</a></p></div>
+      <!-- PENDIENTE: confirmar horario -->
+      <div><h3>Horario</h3><p>Horario: [confirmar]</p></div>
+    </div>
+  </div>
+  <div class="f-bottom"><span>© 2026 Siena Peluquería</span><span>Macul, Santiago</span></div>
+</footer>
+
+<!-- Asistente IA (maqueta: respuestas fijas, sin backend) -->
+<button class="chat-fab" id="chatFab" aria-label="Abrir Asistente Siena" aria-expanded="false" aria-controls="chat">
+  <span class="dot" aria-hidden="true"></span><span class="x" aria-hidden="true"></span>
+</button>
+<div class="chat" id="chat" role="dialog" aria-label="Asistente Siena" inert>
+  <div class="chat-head">
+    <div class="chat-title"><span class="btn-dot" aria-hidden="true"></span><div>Asistente Siena<div class="chat-sub">Responde al instante</div></div></div>
+    <button class="chat-close" id="chatClose" aria-label="Cerrar asistente">×</button>
+  </div>
+  <div class="chat-log" id="chatLog" aria-live="polite">
+    <div class="msg msg--bot">¡Hola! ¿Te ayudo a elegir servicio o agendar?</div>
+  </div>
+  <div class="chips" role="group" aria-label="Respuestas rápidas">
+    <button class="chip" data-q="precios">Precios</button>
+    <button class="chip" data-q="horario">Horario</button>
+    <button class="chip" data-q="llegar">Cómo llegar</button>
+    <button class="chip" data-q="agendar">Agendar</button>
+  </div>
+</div>
+
+<script>
+(() => {
+  "use strict";
+  const d = document, root = d.documentElement;
+  root.classList.replace("no-js", "js");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  const WA = "https://wa.me/56945821631?text=";
+  const wa = (t) => WA + encodeURIComponent(t);
+
+  // Mensajes de WhatsApp por servicio
+  d.querySelectorAll("[data-wa]").forEach((a) => (a.href = wa(a.dataset.wa)));
+
+  /* ---------------- Splash ---------------- */
+  const splash = d.getElementById("splash");
+  const count = d.getElementById("splashCount");
+  root.classList.add("splash-lock");
+  const finishSplash = () => {
+    splash.classList.add("is-logo");
+    setTimeout(() => {
+      splash.classList.add("is-out");
+      root.classList.remove("splash-lock");
+      revealHero();
+      setTimeout(() => splash.remove(), 750);
+    }, 300);
+  };
+  if (reduce.matches) {
+    count.textContent = "100";
+    setTimeout(finishSplash, 200);
+  } else {
+    const DUR = 2000, t0 = performance.now();
+    const ease = (x) => (x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / DUR);
+      count.textContent = Math.round(ease(p) * 100);
+      p < 1 ? requestAnimationFrame(tick) : finishSplash();
+    };
+    requestAnimationFrame(tick);
+  }
+
+  /* ---------------- Hero: máscara de cards ---------------- */
+  const hero = d.getElementById("hero");
+  const svg = hero.querySelector(".hero-mask");
+  const path = svg.querySelector("path");
+  const windows = [...hero.querySelectorAll("[data-window]")];
+  const rr = (x, y, w, h, r) => {
+    r = Math.min(r, w / 2, h / 2);
+    return `M${x + r} ${y}H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h - r}A${r} ${r} 0 0 1 ${x + w - r} ${y + h}` +
+           `H${x + r}A${r} ${r} 0 0 1 ${x} ${y + h - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`;
+  };
+  const drawMask = () => {
+    const hb = hero.getBoundingClientRect();
+    const W = hb.width, H = hb.height;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    let p = `M0 0H${W}V${H}H0Z`;
+    windows.forEach((el) => {
+      const b = el.getBoundingClientRect();
+      const r = parseFloat(getComputedStyle(el).borderTopLeftRadius) || 0;
+      p += rr(b.left - hb.left, b.top - hb.top, b.width, b.height, r);
+    });
+    path.setAttribute("d", p);
+  };
+  let maskRaf = 0;
+  const ro = new ResizeObserver(() => { cancelAnimationFrame(maskRaf); maskRaf = requestAnimationFrame(drawMask); });
+  ro.observe(hero); windows.forEach((w) => ro.observe(w));
+  drawMask();
+
+  function revealHero() {
+    hero.querySelectorAll("[data-hero]").forEach((el, i) => {
+      el.style.setProperty("--d", `${i * 120}ms`);
+      el.classList.add("is-in");
+    });
+  }
+
+  /* ---------------- Video ping-pong ---------------- */
+  const video = d.getElementById("heroVideo");
+  let heroVisible = true;
+  const applyMotionPref = () => {
+    if (reduce.matches) { video.pause(); video.removeAttribute("autoplay"); }
+    else if (heroVisible) { video.play().catch(() => {}); }
+  };
+  if (video.dataset.pingpong === "js") {
+    // Alternativa si el archivo solo va hacia adelante: retroceder a ~30 fps con rAF
+    video.loop = false;
+    let rev = false, last = 0;
+    const back = (now) => {
+      if (!rev) return;
+      if (now - last >= 33) {
+        const dt = last ? (now - last) / 1000 : 1 / 30;
+        last = now;
+        video.currentTime = Math.max(0, video.currentTime - dt);
+      }
+      if (video.currentTime <= 0.001) { rev = false; video.play().catch(() => {}); return; }
+      requestAnimationFrame(back);
+    };
+    video.addEventListener("ended", () => { rev = true; last = 0; requestAnimationFrame(back); });
+  }
+  // La burbuja del asistente aparece al pasar la mitad del hero (en el hero ya está el CTA y así no tapa el texto)
+  const fabEl = d.getElementById("chatFab");
+  new IntersectionObserver(([e]) => {
+    const away = e.intersectionRatio > 0.5;
+    root.classList.toggle("fab-away", away);
+    fabEl.tabIndex = away && !root.classList.contains("chat-open") ? -1 : 0;
+  }, { threshold: [0, 0.5, 1] }).observe(hero);
+  new IntersectionObserver(([e]) => {
+    heroVisible = e.isIntersecting;
+    if (reduce.matches) return;
+    heroVisible ? video.play().catch(() => {}) : video.pause();
+  }, { threshold: 0.01 }).observe(hero);
+  reduce.addEventListener?.("change", applyMotionPref);
+  applyMotionPref();
+
+  /* ---------------- Menú móvil ---------------- */
+  const toggle = d.getElementById("navToggle"), menu = d.getElementById("menu");
+  const setMenu = (open) => {
+    root.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", open);
+    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    open ? menu.removeAttribute("inert") : menu.setAttribute("inert", "");
+    if (open) setTimeout(() => menu.querySelector("a")?.focus({ preventScroll: true }), 300);
+    else toggle.focus({ preventScroll: true });
+  };
+  toggle.addEventListener("click", () => setMenu(!root.classList.contains("menu-open")));
+  d.getElementById("menuClose").addEventListener("click", () => setMenu(false));
+  d.getElementById("menuScrim").addEventListener("click", () => setMenu(false));
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+
+  /* ---------------- Servicios: card activa ---------------- */
+  const srvs = [...d.querySelectorAll(".srv")];
+  if (matchMedia("(hover: hover)").matches) {
+    const activate = (el) => srvs.forEach((s) => s.classList.toggle("is-active", s === el));
+    srvs.forEach((s) => { s.addEventListener("pointerenter", () => activate(s)); s.addEventListener("focus", () => activate(s)); });
+  }
+
+  /* ---------------- Revelado al hacer scroll ---------------- */
+  d.querySelectorAll("[data-stagger]").forEach((g) => {
+    g.querySelectorAll(":scope > [data-reveal], :scope > * > [data-reveal]").forEach((el, i) => el.style.setProperty("--d", `${i * 120}ms`));
+  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+  d.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+
+  /* ---------------- Asistente (maqueta) ---------------- */
+  const fab = d.getElementById("chatFab"), chat = d.getElementById("chat"), log = d.getElementById("chatLog");
+  const setChat = (open) => {
+    root.classList.toggle("chat-open", open);
+    fab.setAttribute("aria-expanded", open);
+    fab.setAttribute("aria-label", open ? "Cerrar Asistente Siena" : "Abrir Asistente Siena");
+    open ? chat.removeAttribute("inert") : chat.setAttribute("inert", "");
+    if (open) setTimeout(() => chat.querySelector(".chip")?.focus({ preventScroll: true }), 250);
+  };
+  fab.addEventListener("click", () => setChat(!root.classList.contains("chat-open")));
+  d.getElementById("chatClose").addEventListener("click", () => { setChat(false); fab.focus(); });
+
+  const answers = {
+    precios: { q: "Precios", a: "Corte desde $[X], color desde $[X], barbería desde $[X] y manicure desde $[X]. El precio final depende del largo y del servicio; te lo confirmamos por WhatsApp.", w: "Hola Siena, quiero consultar precios" },
+    horario: { q: "Horario", a: "Nuestro horario es [confirmar]. Escríbenos por WhatsApp y te contamos qué horas quedan disponibles.", w: "Hola Siena, ¿qué horas tienen disponibles?" },
+    llegar:  { q: "Cómo llegar", a: "Estamos en Av. Macul 3578, interior Unimarc. Tienes estacionamiento subterráneo gratis.", w: "Hola Siena, quiero agendar una hora" },
+    agendar: { q: "Agendar", a: "Agendamos solo por WhatsApp. Cuéntanos qué servicio quieres y te damos hora.", w: "Hola Siena, quiero agendar una hora" }
+  };
+  const add = (html, cls) => {
+    const m = d.createElement("div");
+    m.className = "msg " + cls; m.innerHTML = html; log.appendChild(m);
+    log.scrollTop = log.scrollHeight; return m;
+  };
+  chat.querySelectorAll(".chip").forEach((c) => c.addEventListener("click", () => {
+    const r = answers[c.dataset.q];
+    add(r.q, "msg--me");
+    const typing = add('<span class="typing" aria-label="Escribiendo"><i></i><i></i><i></i></span>', "msg--bot");
+    typing.style.padding = "0";
+    setTimeout(() => {
+      typing.remove();
+      add(`${r.a}<br><a class="btn btn--ink" href="${wa(r.w)}" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Seguir en WhatsApp</a>`, "msg--bot");
+    }, reduce.matches ? 0 : 650);
+  }));
+
+  /* Escape cierra menú / asistente */
+  d.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (root.classList.contains("menu-open")) setMenu(false);
+    if (root.classList.contains("chat-open")) { setChat(false); fab.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
