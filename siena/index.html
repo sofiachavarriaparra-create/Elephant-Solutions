@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Siena Peluquería | Peluquería y barbería en Macul</title>
-<meta name="description" content="Peluquería y barbería en Macul: color, corte, barbería, manicure y estética con L'Oréal Professionnel. Av. Macul 3578, interior Unimarc. Agenda por WhatsApp.">
+<meta name="description" content="Peluquería y barbería en Macul: color, corte, barbería, manicure y estética con L'Oréal Professionnel. Av. Macul 3578, interior Unimarc. Agenda tu hora en línea.">
 <meta name="theme-color" content="#F5EFE6">
 <!-- MAQUETA para revisión con la clienta: no indexar. Quitar esta línea al publicar en el dominio final. -->
 <meta name="robots" content="noindex, nofollow">
@@ -95,6 +95,7 @@ h1,h2,h3,p{margin:0}
 h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:.9}
 ul{list-style:none;margin:0;padding:0}
 section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
+[hidden]{display:none!important}
 .sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:2px solid var(--sienna);outline-offset:3px;border-radius:6px}
 .on-dark :focus-visible,.hero :focus-visible{outline-color:var(--gold)}
@@ -168,7 +169,8 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 .menu-open .menu li:nth-child(1){transition-delay:.14s}
 .menu-open .menu li:nth-child(2){transition-delay:.26s}
 .menu-open .menu li:nth-child(3){transition-delay:.38s}
-.menu-open .menu .btn{opacity:1;transform:none;transition-delay:.5s}
+.menu-open .menu li:nth-child(4){transition-delay:.5s}
+.menu-open .menu .btn{opacity:1;transform:none;transition-delay:.62s}
 .menu-open{overflow:hidden}
 @media (min-width:768px){.menu,.menu-scrim{display:none}}
 
@@ -332,6 +334,57 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
   .price-list li{padding:22px 0}
 }
 
+/* Agenda en línea (maqueta: sin backend) */
+.agenda-wrap{margin-top:clamp(100px,14vw,200px)}
+.agenda{display:grid;gap:var(--gap)}
+.ag-intro{background:var(--ink);color:#fff;padding:30px 24px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.ag-kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.ag-intro h2{font-size:clamp(52px,8vw,124px);line-height:.84;letter-spacing:-.05em}
+.ag-intro h2 .acc{display:block;font-size:1.05em;line-height:.85}
+.ag-lead{margin-top:22px;font-size:16px;line-height:1.45;color:rgba(255,255,255,.78);max-width:32ch}
+.ag-points li{padding:16px 0;border-top:1px solid rgba(230,161,58,.28);display:flex;gap:14px;align-items:baseline;font-weight:700;font-size:16px;letter-spacing:-.01em}
+.ag-points li:last-child{border-bottom:1px solid rgba(230,161,58,.28)}
+.ag-points span{flex:none;min-width:22px;font-size:12px;letter-spacing:.08em;color:var(--gold);font-variant-numeric:tabular-nums}
+.ag-box{background:var(--white);padding:26px 18px 22px;display:flex;flex-direction:column;gap:28px;min-width:0}
+.ag-step h3{display:flex;justify-content:space-between;gap:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sienna);line-height:1.2;margin-bottom:12px}
+.ag-step h3 em{font-style:normal;letter-spacing:.02em;text-transform:none;color:var(--muted);font-weight:400}
+.ag-opts{display:flex;flex-wrap:wrap;gap:6px}
+.ag-opt{min-height:42px;padding:0 15px;border-radius:999px;border:1px solid rgba(14,13,12,.22);font-size:14px;font-weight:700;
+  transition:background-color .3s,color .3s,border-color .3s}
+.ag-opt:hover:not(:disabled){border-color:var(--ink)}
+.ag-opt[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ag-opt:disabled{opacity:.32;text-decoration:line-through;cursor:not-allowed}
+.ag-days{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.ag-day{flex:none;width:64px;min-height:76px;border-radius:14px;border:1px solid rgba(14,13,12,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  scroll-snap-align:start;transition:background-color .3s,color .3s,border-color .3s}
+.ag-day small{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ag-day b{font-size:24px;letter-spacing:-.03em;line-height:1}
+.ag-day i{font-style:normal;font-size:11px;color:var(--muted)}
+.ag-day[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ag-day[aria-pressed="true"] small,.ag-day[aria-pressed="true"] i{color:var(--gold)}
+.ag-times{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.ag-times .ag-opt{padding:0;width:100%;font-variant-numeric:tabular-nums}
+.ag-note{font-size:14px;line-height:1.4;color:var(--muted)}
+.ag-form{display:grid;gap:8px}
+.ag-form input{width:100%;min-height:50px;border-radius:12px;border:1px solid rgba(14,13,12,.2);background:var(--ivory);padding:0 16px;font:inherit;font-size:16px;color:var(--ink)}
+.ag-form input:focus{outline:2px solid var(--sienna);outline-offset:1px;border-color:transparent}
+.ag-sum{font-size:14px;line-height:1.45;color:var(--muted);min-height:2.9em}
+.ag-sum b{color:var(--ink)}
+.ag-submit{width:100%;min-height:56px;font-size:16px}
+.ag-submit:disabled{opacity:.38;cursor:not-allowed;transform:none}
+.ag-done{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding:12px 0}
+.ag-check{width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:26px;line-height:1}
+.ag-done h3{font-size:clamp(36px,4.4vw,56px);line-height:.9;letter-spacing:-.045em}
+.ag-done p{font-size:17px;line-height:1.45;max-width:34ch}
+.ag-done .ag-note{font-size:14px}
+.ag-demo{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid rgba(14,13,12,.2);padding:4px 8px;border-radius:999px}
+@media (min-width:768px){
+  .agenda{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  .ag-intro,.ag-box{padding:var(--pad)}
+  .ag-times{grid-template-columns:repeat(5,1fr)}
+  .ag-form{grid-template-columns:1fr 1fr}
+}
+
 /* Ubicación */
 .location-wrap{margin-top:clamp(100px,14vw,200px)}
 .location{display:grid;gap:var(--gap)}
@@ -440,7 +493,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
     <a href="#servicios">Servicios</a>
     <a href="#precios">Precios</a>
     <a href="#como-llegar">Cómo llegar</a>
-    <a class="btn btn--ink" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda por WhatsApp</a>
+    <a class="btn btn--ink" href="#agenda"><span class="btn-dot" aria-hidden="true"></span>Agenda tu hora</a>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
     <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
@@ -454,9 +507,10 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
   <ul>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#precios">Precios</a></li>
+    <li><a href="#agenda">Agenda</a></li>
     <li><a href="#como-llegar">Cómo llegar</a></li>
   </ul>
-  <a class="btn btn--ink" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda por WhatsApp</a>
+  <a class="btn btn--ink" href="#agenda"><span class="btn-dot" aria-hidden="true"></span>Agenda tu hora</a>
 </div>
 
 <main id="contenido">
@@ -489,7 +543,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
         </h1>
       </div>
       <div class="hero-side" data-hero>
-        <a class="btn btn--white" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda por WhatsApp</a>
+        <a class="btn btn--white" href="#agenda"><span class="btn-dot" aria-hidden="true"></span>Agenda tu hora</a>
         <p class="hero-park">Estacionamiento subterráneo gratis</p>
       </div>
     </div>
@@ -530,49 +584,37 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
       <h2 id="srv-title">Nuestros <span class="acc">servicios</span></h2>
     </div>
 
-    <a class="srv srv--01 card is-active" data-reveal target="_blank" rel="noopener"
-       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
-       data-wa="Hola Siena, quiero agendar una hora para corte y peinado">
+    <a class="srv srv--01 card is-active" data-reveal href="#agenda" data-svc="Corte y peinado">
       <img src="assets/srv-01-corte.jpg" alt="Foto de referencia: peinado de cabello largo con peineta" loading="lazy" decoding="async" width="900" height="816">
       <span class="ph">foto real de Siena</span>
       <span class="glass"><span><span class="glass-num">01</span><span class="glass-name">Corte y peinado</span></span><span class="glass-go" aria-hidden="true">→</span></span>
     </a>
 
-    <a class="srv srv--02 card" data-reveal target="_blank" rel="noopener"
-       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
-       data-wa="Hola Siena, quiero agendar una hora para color, mechas o balayage">
+    <a class="srv srv--02 card" data-reveal href="#agenda" data-svc="Color, mechas y balayage">
       <img src="assets/srv-02-color.jpg" alt="Foto de referencia: cabello con mechas cobrizas iluminado por luz dorada" loading="lazy" decoding="async" width="800" height="1617">
       <span class="ph">foto real de Siena</span>
       <span class="glass"><span><span class="glass-num">02</span><span class="glass-name">Color mechas y balayage</span></span><span class="glass-go" aria-hidden="true">→</span></span>
     </a>
 
-    <a class="srv srv--03 card" data-reveal target="_blank" rel="noopener"
-       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
-       data-wa="Hola Siena, quiero agendar una hora para hidratación o tratamiento">
+    <a class="srv srv--03 card" data-reveal href="#agenda" data-svc="Hidratación y tratamientos">
       <img src="assets/srv-03-hidratacion.jpg" alt="Foto de referencia: cabello largo con brillo" loading="lazy" decoding="async" width="700" height="615">
       <span class="ph">foto real de Siena</span>
       <span class="glass"><span><span class="glass-num">03</span><span class="glass-name">Hidratación y tratamientos</span></span><span class="glass-go" aria-hidden="true">→</span></span>
     </a>
 
-    <a class="srv srv--04 card" data-reveal target="_blank" rel="noopener"
-       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
-       data-wa="Hola Siena, quiero agendar una hora de barbería">
+    <a class="srv srv--04 card" data-reveal href="#agenda" data-svc="Barbería">
       <img src="assets/srv-04-barberia.jpg" alt="Foto de referencia: estilista trabajando" loading="lazy" decoding="async" width="640" height="911">
       <span class="ph">foto real de Siena</span>
       <span class="glass"><span><span class="glass-num">04</span><span class="glass-name">Barbería</span></span><span class="glass-go" aria-hidden="true">→</span></span>
     </a>
 
-    <a class="srv srv--05 card" data-reveal target="_blank" rel="noopener"
-       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
-       data-wa="Hola Siena, quiero agendar una hora de manicure o diseño de uñas">
+    <a class="srv srv--05 card" data-reveal href="#agenda" data-svc="Manicure y uñas">
       <img src="assets/srv-05-unas.jpg" alt="Foto de referencia: manos de estilista" loading="lazy" decoding="async" width="700" height="647">
       <span class="ph">foto real de Siena</span>
       <span class="glass"><span><span class="glass-num">05</span><span class="glass-name">Manicure y diseño de uñas</span></span><span class="glass-go" aria-hidden="true">→</span></span>
     </a>
 
-    <a class="srv srv--06 card" data-reveal target="_blank" rel="noopener"
-       href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora"
-       data-wa="Hola Siena, quiero agendar una hora de estética">
+    <a class="srv srv--06 card" data-reveal href="#agenda" data-svc="Estética">
       <img src="assets/srv-06-estetica.jpg" alt="Foto de referencia: espejo del salón con luz cálida" loading="lazy" decoding="async" width="700" height="700">
       <span class="ph">foto real de Siena</span>
       <span class="glass"><span><span class="glass-num">06</span><span class="glass-name">Estética</span></span><span class="glass-go" aria-hidden="true">→</span></span>
@@ -594,7 +636,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
       <ul class="trust-list" data-stagger>
         <li data-reveal><span class="trust-idx" aria-hidden="true">01</span><p>Salón L'Oréal Professionnel</p></li>
         <li data-reveal><span class="trust-idx" aria-hidden="true">02</span><p><span class="big">+390</span> trabajos en @sienapeluqueria</p></li>
-        <li data-reveal><span class="trust-idx" aria-hidden="true">03</span><p>Agenda exclusiva por WhatsApp</p></li>
+        <li data-reveal><span class="trust-idx" aria-hidden="true">03</span><p>Agenda en línea las 24 horas</p></li>
       </ul>
       <a class="ig-link" href="https://instagram.com/sienapeluqueria" target="_blank" rel="noopener">Ver más en Instagram <span aria-hidden="true">→</span></a>
     </div>
@@ -641,7 +683,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
     <div class="prices-left">
       <h2 id="p-title">Precios</h2>
       <div class="price-cta">
-        <a class="btn btn--ink" href="https://wa.me/56945821631?text=Hola%20Siena%2C%20quiero%20agendar%20una%20hora" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Agenda tu hora</a>
+        <a class="btn btn--ink" href="#agenda"><span class="btn-dot" aria-hidden="true"></span>Agenda tu hora</a>
         <p class="price-note">Valores referenciales. El precio final depende del largo y del servicio; te lo confirmamos por WhatsApp.</p>
       </div>
     </div>
@@ -651,6 +693,77 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
       <li><span class="svc">Barbería</span><span class="amt">desde <b>$[X]</b></span></li>
       <li><span class="svc">Manicure</span><span class="amt">desde <b>$[X]</b></span></li>
     </ul>
+  </div>
+</section>
+
+<!-- 8b · AGENDA EN LÍNEA
+     MAQUETA: la reserva no se guarda (sin backend). En la versión final, la hora entra a la agenda de Siena
+     y la clienta recibe confirmación y recordatorio por WhatsApp. Horario de ejemplo: lun a sáb, 9:00 a 19:00. -->
+<section class="mosaic agenda-wrap" id="agenda" aria-labelledby="ag-title">
+  <div class="agenda" data-stagger>
+    <div class="ag-intro card on-dark" data-reveal>
+      <div>
+        <p class="ag-kicker">Agenda en línea</p>
+        <h2 id="ag-title">Reserva tu <span class="acc">hora</span></h2>
+        <p class="ag-lead">Elige servicio, día y hora en un minuto, también de noche o en domingo. Sin esperar respuesta.</p>
+      </div>
+      <ul class="ag-points">
+        <li><span>01</span>Disponible las 24 horas</li>
+        <li><span>02</span>Confirmación al instante por WhatsApp</li>
+        <li><span>03</span>Recordatorio el día antes</li>
+      </ul>
+    </div>
+
+    <div class="ag-box card" data-reveal id="agBox">
+      <form id="agForm" novalidate>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <div class="ag-step">
+            <h3 id="ag-s1">1 · Servicio</h3>
+            <div class="ag-opts" id="agSvc" role="group" aria-labelledby="ag-s1">
+              <button type="button" class="ag-opt" aria-pressed="false">Corte y peinado</button>
+              <button type="button" class="ag-opt" aria-pressed="false">Color, mechas y balayage</button>
+              <button type="button" class="ag-opt" aria-pressed="false">Hidratación y tratamientos</button>
+              <button type="button" class="ag-opt" aria-pressed="false">Barbería</button>
+              <button type="button" class="ag-opt" aria-pressed="false">Manicure y uñas</button>
+              <button type="button" class="ag-opt" aria-pressed="false">Estética</button>
+            </div>
+          </div>
+
+          <div class="ag-step">
+            <h3 id="ag-s2">2 · Día <em id="agMonth"></em></h3>
+            <div class="ag-days" id="agDays" role="group" aria-labelledby="ag-s2"></div>
+          </div>
+
+          <div class="ag-step">
+            <h3 id="ag-s3">3 · Hora</h3>
+            <div class="ag-times" id="agTimes" role="group" aria-labelledby="ag-s3"></div>
+            <p class="ag-note" id="agTimesNote" hidden></p>
+          </div>
+
+          <div class="ag-step">
+            <h3>4 · Tus datos</h3>
+            <div class="ag-form">
+              <label class="sr-only" for="agName">Nombre</label>
+              <input id="agName" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre" required>
+              <label class="sr-only" for="agPhone">WhatsApp</label>
+              <input id="agPhone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="WhatsApp (+56 9 …)" required>
+            </div>
+          </div>
+
+          <p class="ag-sum" id="agSum" aria-live="polite">Elige servicio, día y hora.</p>
+          <button type="submit" class="btn btn--ink ag-submit" id="agSubmit" disabled><span class="btn-dot" aria-hidden="true"></span>Reservar hora</button>
+        </div>
+      </form>
+
+      <div class="ag-done" id="agDone" hidden tabindex="-1">
+        <span class="ag-check" aria-hidden="true">✓</span>
+        <h3 id="agDoneTitle">¡Listo!</h3>
+        <p id="agDoneText"></p>
+        <p class="ag-note">Te llega la confirmación por WhatsApp y un recordatorio el día antes. Si necesitas cambiar la hora, respóndenos ahí mismo.</p>
+        <span class="ag-demo">Maqueta · la reserva no se guarda</span>
+        <button type="button" class="btn btn--line" id="agAgain">Hacer otra reserva</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -837,9 +950,9 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 
   const answers = {
     precios: { q: "Precios", a: "Corte desde $[X], color desde $[X], barbería desde $[X] y manicure desde $[X]. El precio final depende del largo y del servicio; te lo confirmamos por WhatsApp.", w: "Hola Siena, quiero consultar precios" },
-    horario: { q: "Horario", a: "Nuestro horario es [confirmar]. Escríbenos por WhatsApp y te contamos qué horas quedan disponibles.", w: "Hola Siena, ¿qué horas tienen disponibles?" },
+    horario: { q: "Horario", a: "Nuestro horario es [confirmar]. Las horas libres las ves en la agenda en línea, más abajo en esta página.", link: "#agenda", label: "Ver horas libres" },
     llegar:  { q: "Cómo llegar", a: "Estamos en Av. Macul 3578, interior Unimarc. Tienes estacionamiento subterráneo gratis.", w: "Hola Siena, quiero agendar una hora" },
-    agendar: { q: "Agendar", a: "Agendamos solo por WhatsApp. Cuéntanos qué servicio quieres y te damos hora.", w: "Hola Siena, quiero agendar una hora" }
+    agendar: { q: "Agendar", a: "Puedes reservar tu hora aquí mismo, en la agenda en línea, a cualquier hora. Eliges servicio, día y hora, y te llega la confirmación por WhatsApp.", link: "#agenda", label: "Ir a la agenda" }
   };
   const add = (html, cls) => {
     const m = d.createElement("div");
@@ -853,9 +966,114 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
     typing.style.padding = "0";
     setTimeout(() => {
       typing.remove();
-      add(`${r.a}<br><a class="btn btn--ink" href="${wa(r.w)}" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Seguir en WhatsApp</a>`, "msg--bot");
+      add(r.link ? `${r.a}<br><a class="btn btn--ink" href="${r.link}" data-close-chat><span class="btn-dot" aria-hidden="true"></span>${r.label}</a>`
+               : `${r.a}<br><a class="btn btn--ink" href="${wa(r.w)}" target="_blank" rel="noopener"><span class="btn-dot" aria-hidden="true"></span>Seguir en WhatsApp</a>`, "msg--bot");
     }, reduce.matches ? 0 : 650);
   }));
+
+  // Botones del asistente que llevan a la agenda: cierran el chat
+  log.addEventListener("click", (e) => { if (e.target.closest("[data-close-chat]")) setChat(false); });
+
+  /* ---------------- Agenda en línea (maqueta, sin backend) ---------------- */
+  const DIAS = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+  const DIAS_L = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const HORAS = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]; // horario de ejemplo: lun a sáb, 9:00 a 19:00
+  const ag = { svc: null, day: null, time: null };
+  const agForm = d.getElementById("agForm"), agDone = d.getElementById("agDone");
+  const agSvc = d.getElementById("agSvc"), agDays = d.getElementById("agDays"), agTimes = d.getElementById("agTimes");
+  const agNote = d.getElementById("agTimesNote"), agSum = d.getElementById("agSum"), agSubmit = d.getElementById("agSubmit");
+  const agName = d.getElementById("agName"), agPhone = d.getElementById("agPhone"), agMonth = d.getElementById("agMonth");
+  const press = (group, btn) => group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b === btn));
+  const fmtDay = (dt) => `${DIAS_L[dt.getDay()]} ${dt.getDate()} de ${MESES[dt.getMonth()]}`;
+  // Horas "tomadas" de ejemplo, fijas para cada día (para que la agenda se vea real)
+  const taken = (dt, h) => ((dt.getDate() * 7 + dt.getMonth() * 3 + h * 5) % 9) < 3;
+
+  // Próximos 14 días hábiles (sin domingos)
+  const days = [];
+  for (let i = 0, base = new Date(); days.length < 14; i++) {
+    const dt = new Date(base.getFullYear(), base.getMonth(), base.getDate() + i);
+    if (dt.getDay() !== 0) days.push(dt);
+  }
+  const now = new Date();
+  const freeHours = (dt) => HORAS.filter((h) => {
+    const past = dt.toDateString() === now.toDateString() && h <= now.getHours();
+    return !past && !taken(dt, h);
+  });
+  days.forEach((dt, i) => {
+    const b = d.createElement("button");
+    b.type = "button"; b.className = "ag-day"; b.setAttribute("aria-pressed", "false");
+    const isToday = dt.toDateString() === now.toDateString();
+    b.innerHTML = `<small>${isToday ? "hoy" : DIAS[dt.getDay()]}</small><b>${dt.getDate()}</b><i>${MESES[dt.getMonth()].slice(0, 3)}</i>`;
+    b.setAttribute("aria-label", fmtDay(dt));
+    b.addEventListener("click", () => { ag.day = dt; ag.time = null; press(agDays, b); renderTimes(); update(); });
+    agDays.appendChild(b);
+  });
+  const setMonth = () => {
+    const dt = ag.day || days[0];
+    agMonth.textContent = MESES[dt.getMonth()].replace(/^./, (c) => c.toUpperCase()) + " " + dt.getFullYear();
+  };
+
+  const renderTimes = () => {
+    agTimes.innerHTML = "";
+    setMonth();
+    if (!ag.day) { agNote.hidden = false; agNote.textContent = "Elige un día para ver las horas libres."; return; }
+    const free = freeHours(ag.day);
+    HORAS.forEach((h) => {
+      const b = d.createElement("button");
+      b.type = "button"; b.className = "ag-opt"; b.textContent = `${h}:00`;
+      b.setAttribute("aria-pressed", "false");
+      if (!free.includes(h)) { b.disabled = true; b.setAttribute("aria-label", `${h}:00, no disponible`); }
+      b.addEventListener("click", () => { ag.time = h; press(agTimes, b); update(); });
+      agTimes.appendChild(b);
+    });
+    agNote.hidden = free.length > 0;
+    agNote.textContent = "No quedan horas este día. Prueba con otro.";
+  };
+
+  const phoneOk = () => agPhone.value.replace(/\D/g, "").length >= 8;
+  const update = () => {
+    const parts = [];
+    if (ag.svc) parts.push(`<b>${ag.svc}</b>`);
+    if (ag.day) parts.push(`el ${fmtDay(ag.day)}`);
+    if (ag.time !== null) parts.push(`a las <b>${ag.time}:00</b>`);
+    const ready = ag.svc && ag.day && ag.time !== null;
+    const dataOk = agName.value.trim() && phoneOk();
+    const txt = parts.join(" ");
+    agSum.innerHTML = parts.length
+      ? txt.charAt(0).toUpperCase() + txt.slice(1) + (ready && !dataOk ? ". Solo falta tu nombre y WhatsApp." : ".")
+      : "Elige servicio, día y hora.";
+    agSubmit.disabled = !(ready && dataOk);
+  };
+
+  agSvc.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { ag.svc = b.textContent; press(agSvc, b); update(); }));
+  [agName, agPhone].forEach((el) => el.addEventListener("input", update));
+
+  // Las cards de servicios dejan el servicio elegido en la agenda
+  d.querySelectorAll(".srv[data-svc]").forEach((a) => a.addEventListener("click", () => {
+    const b = [...agSvc.querySelectorAll("button")].find((x) => x.textContent === a.dataset.svc);
+    if (b) b.click();
+  }));
+
+  agForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (agSubmit.disabled) return;
+    const name = agName.value.trim().split(/\s+/)[0];
+    d.getElementById("agDoneTitle").textContent = `¡Listo, ${name}!`;
+    d.getElementById("agDoneText").textContent = `Reservaste ${ag.svc} el ${fmtDay(ag.day)} a las ${ag.time}:00 en Siena, Av. Macul 3578, interior Unimarc.`;
+    agForm.hidden = true; agDone.hidden = false; agDone.focus({ preventScroll: true });
+    d.getElementById("agBox").scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth", block: "start" });
+  });
+  d.getElementById("agAgain").addEventListener("click", () => {
+    agForm.reset(); ag.svc = ag.day = null; ag.time = null;
+    press(agSvc, null); press(agDays, null);
+    renderTimes(); update();
+    agDone.hidden = true; agForm.hidden = false;
+  });
+
+  // Por defecto: primer día con horas libres
+  const firstIdx = days.findIndex((dt) => freeHours(dt).length);
+  if (firstIdx >= 0) agDays.children[firstIdx].click(); else renderTimes();
 
   /* Escape cierra menú / asistente */
   d.addEventListener("keydown", (e) => {
