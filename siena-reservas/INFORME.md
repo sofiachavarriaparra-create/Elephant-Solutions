@@ -22,6 +22,7 @@ Fecha: 4 de noviembre de 2026. Rama `claude/pensive-faraday-u55hr6`. La maqueta 
 | Revisión de secretos y modo seguro | Repositorio | Sin hallazgos |
 | Sonda de candado | **n8n Cloud** | 1 de 6 obtuvo el candado; las demás lo rechazaron |
 | Sonda de entorno | **n8n Cloud** | Todo OK: Luxon, cambio de hora de Santiago, formato en español, TextEncoder, regex Unicode |
+| Contrato con **Google Calendar real** (calendario secundario "Siena pruebas") | **n8n Cloud** | 11/11: crear con id propio, id repetido → 409, listar con campos mínimos, leer, mover, borrar → 204, leer borrado → `cancelled`, borrar otra vez → 410. Idéntico al MOCK |
 | Envío de email real | **n8n Cloud + Gmail** | 1 correo [PRUEBA] a la casilla de Elephant (autorizada): Gmail devolvió id → `enviado` |
 
 Los 26 escenarios de integración cubren las pruebas pedidas:
@@ -56,7 +57,7 @@ Problemas encontrados y corregidos en el camino:
 **Verificado con Gmail real (aparte)**: el workflow de prueba `97 Prueba de email` en Cloud usa el mismo nodo Gmail v2.1 con la credencial Gmail de Elephant, y envió **un** correo [PRUEBA] a la propia casilla de Elephant. Gmail devolvió un id de mensaje, que es justo lo que el sistema exige para marcar un aviso como `enviado`. En la entrega, el nodo Gmail sigue desactivado y los envíos externos apagados.
 
 **No verificado / pendiente de credenciales o datos**
-- **Google Calendar real**: no hay credencial de Google Calendar en la instancia ni un calendario de prueba autorizado. No escribí en ningún calendario.
+- **Flujo completo con Google Calendar real**: las operaciones de Google que usa el sistema ya se verificaron contra el calendario de pruebas (prueba de contrato 11/11), pero los workflows 01–03 aún no se ejecutaron completos contra él.
 - **Concurrencia real en Cloud** con webhooks publicados (la sonda corrió en serie).
 - **Workflows 00–04 en Cloud**: no los creé por la API. Cada uno lleva ~28 000 caracteres de código generado y transcribirlos arriesga una copia distinta a la probada sin poder comprobarlo. Se importan desde `n8n/workflows/*.json` (2 minutos, ver README). Sí creé en Cloud las tablas con sus candados y las dos sondas.
 - **WhatsApp** (no existe camino de envío) y la cantidad de proxies de n8n Cloud en `X-Forwarded-For` (afecta el límite por IP).

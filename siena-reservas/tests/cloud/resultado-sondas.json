@@ -18,6 +18,16 @@
         "id": "D1lF9r6YgltvGxGh",
         "nombre": "Siena PRUEBAS · 97 Prueba de email (Cloud)",
         "active": false
+      },
+      {
+        "id": "7UvkDYH9tMdiyrD5",
+        "nombre": "Siena PRUEBAS · 96 Sonda de calendario (solo lectura)",
+        "active": false
+      },
+      {
+        "id": "1AmdtQZJiKNvGwBX",
+        "nombre": "Siena PRUEBAS · 95 Contrato con Google Calendar (calendario de pruebas)",
+        "active": false
       }
     ],
     "data_tables": [
@@ -65,5 +75,35 @@
       ]
     },
     "texto": "Generado por CORE.decideNotification; la regla de CORE.emailResult (enviado solo si Gmail devuelve id) se confirmó con la respuesta real."
+  },
+  "sonda_calendario": {
+    "ejecucion": 18,
+    "resultado": {
+      "calendarioStatus": 200,
+      "nombre": "Siena pruebas",
+      "permiso": "owner",
+      "zona": "America/Santiago",
+      "esPrincipal": false,
+      "eventosProximos60dias": 0
+    }
+  },
+  "contrato_google_calendar": {
+    "ejecucion": 19,
+    "entorno": "Google Calendar REAL, calendario secundario 'Siena pruebas' (no el principal), credencial 'Google Calendar account' de n8n",
+    "todo_ok": true,
+    "codigos": {
+      "1_crear_id_propio": 200,
+      "2_id_repetido": 409,
+      "3_listar_campos_minimos": 200,
+      "4_leer": 200,
+      "5_mover": 200,
+      "6_borrar": 204,
+      "7_leer_borrado": "200 status=cancelled",
+      "8_listar_tras_borrar": "200 sin el evento",
+      "9_borrar_otra_vez": 410,
+      "10_recrear_id_borrado": 409,
+      "11_limpieza": 410
+    },
+    "conclusion": "El MOCK coincide con Google real en todos los códigos y formas de respuesta que usa el sistema. El evento de prueba quedó borrado."
   }
 }
