@@ -122,7 +122,7 @@ Para encender el email: `notificaciones.enviosExternosHabilitados = true`, `emai
 - **Backend**: despublica 01–04 (menú del workflow → *Unpublish*) y, si se quiere, archívalos. Despublicar desactiva los webhooks de inmediato.
 - **Datos de prueba**: borra las filas o las tablas `siena_pruebas_*` (Data tables). Los eventos de prueba se borran del calendario de prueba.
 - **Web**: `api: ""` vuelve a la simulación local; la maqueta pública `/siena` nunca se modificó y esta rama no se fusionó.
-- **Cloud (esta sesión)**: carpeta `Siena PRUEBAS · Reservas` con dos sondas (98 y 99) sin publicar, y las tablas `siena_pruebas_*` (incluida `siena_pruebas_sonda_resultados`). Se pueden archivar o borrar sin afectar nada más.
+- **Cloud (esta sesión)**: carpeta `Siena PRUEBAS · Reservas` con tres workflows de prueba sin publicar (97 email, 98 entorno, 99 candado), y las tablas `siena_pruebas_*` (incluida `siena_pruebas_sonda_resultados`). Se pueden archivar o borrar sin afectar nada más.
 
 ## Protecciones del webhook público
 

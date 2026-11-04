@@ -4,10 +4,28 @@
   "creado": {
     "carpeta": "Siena PRUEBAS · Reservas (0OUaBgq5hnjdCRyn)",
     "workflows_sin_publicar": [
-      { "id": "fNInjoyXocGOa1Ci", "nombre": "Siena PRUEBAS · 99 Sonda de candado (Cloud)", "active": false },
-      { "id": "l61YV1MSzzs4wZy5", "nombre": "Siena PRUEBAS · 98 Sonda de entorno (Cloud)", "active": false }
+      {
+        "id": "fNInjoyXocGOa1Ci",
+        "nombre": "Siena PRUEBAS · 99 Sonda de candado (Cloud)",
+        "active": false
+      },
+      {
+        "id": "l61YV1MSzzs4wZy5",
+        "nombre": "Siena PRUEBAS · 98 Sonda de entorno (Cloud)",
+        "active": false
+      },
+      {
+        "id": "D1lF9r6YgltvGxGh",
+        "nombre": "Siena PRUEBAS · 97 Prueba de email (Cloud)",
+        "active": false
+      }
     ],
-    "data_tables": ["siena_pruebas_candados (3 filas: prof-prueba-1, prof-prueba-2, sonda-candado)", "siena_pruebas_reservas (vacía)", "siena_pruebas_avisos (vacía)", "siena_pruebas_sonda_resultados"]
+    "data_tables": [
+      "siena_pruebas_candados (3 filas: prof-prueba-1, prof-prueba-2, sonda-candado)",
+      "siena_pruebas_reservas (vacía)",
+      "siena_pruebas_avisos (vacía)",
+      "siena_pruebas_sonda_resultados"
+    ]
   },
   "sonda_candado": {
     "metodo": "6 ejecuciones manuales disparadas por la API de n8n; cada una intenta el mismo UPDATE condicional que usa '02 Reservar' y relee la fila",
@@ -16,7 +34,36 @@
   },
   "sonda_entorno": {
     "ejecucion": 16,
-    "resultado": { "luxon": true, "dst_2026_09_04": true, "dst_2026_09_07": true, "dst_2027_04_02": true, "dst_2027_04_05": true, "hora_inexistente_detectada": true, "locale_es": true, "textEncoder": true, "typedArrays": true, "regexUnicode": true, "staticData": true, "random": true, "todo_ok": true, "zonaInstancia": "America/Santiago" }
+    "resultado": {
+      "luxon": true,
+      "dst_2026_09_04": true,
+      "dst_2026_09_07": true,
+      "dst_2027_04_02": true,
+      "dst_2027_04_05": true,
+      "hora_inexistente_detectada": true,
+      "locale_es": true,
+      "textEncoder": true,
+      "typedArrays": true,
+      "regexUnicode": true,
+      "staticData": true,
+      "random": true,
+      "todo_ok": true,
+      "zonaInstancia": "America/Santiago"
+    }
   },
-  "no_creado_en_cloud": "Los workflows 00–04. Cada uno lleva ~28 000 caracteres de código generado; para que la copia en Cloud sea idéntica a la probada se importan desde n8n/workflows/*.json en vez de transcribirlos por la API."
+  "no_creado_en_cloud": "Los workflows 00–04. Cada uno lleva ~28 000 caracteres de código generado; para que la copia en Cloud sea idéntica a la probada se importan desde n8n/workflows/*.json en vez de transcribirlos por la API.",
+  "prueba_email": {
+    "ejecucion": 17,
+    "metodo": "Nodo Gmail v2.1 (el mismo de '04 Avisos') con la credencial Gmail existente de Elephant; un solo correo [PRUEBA] enviado a la propia casilla de Elephant (destinatario autorizado por la usuaria).",
+    "resultado": {
+      "estado": "enviado",
+      "resultado": "gmail:1a1a74a6f65f663f",
+      "labelIds": [
+        "UNREAD",
+        "SENT",
+        "INBOX"
+      ]
+    },
+    "texto": "Generado por CORE.decideNotification; la regla de CORE.emailResult (enviado solo si Gmail devuelve id) se confirmó con la respuesta real."
+  }
 }
