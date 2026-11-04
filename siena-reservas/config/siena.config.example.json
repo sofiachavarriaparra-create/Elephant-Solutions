@@ -1,0 +1,138 @@
+{
+  "_aviso": "DATOS DE PRUEBA. Profesionales, servicios, horarios, calendarios y destinatarios son ficticios y NO corresponden a Siena Peluquería. No contiene secretos: las credenciales viven solo en n8n.",
+  "entorno": {
+    "modo": "pruebas",
+    "_modos": "demo = solo simulación en el navegador | pruebas = backend real con calendarios de prueba y envíos externos apagados | produccion = bloqueado hasta cumplir 'produccion.requisitos'",
+    "zonaHoraria": "America/Santiago",
+    "etiqueta": "PRUEBAS"
+  },
+  "produccion": {
+    "habilitada": false,
+    "requisitos": {
+      "pruebaIntegracionGoogleCalendarAprobada": false,
+      "calendariosRealesConfirmadosPorSiena": false,
+      "datosOperativosDeSienaCargados": false,
+      "proteccionAntiAbusoDelanteDelWebhook": false,
+      "politicaDePrivacidadActualizada": false,
+      "canalDeNotificacionOficialVerificado": false
+    }
+  },
+  "backend": {
+    "baseUrl": "https://TU-INSTANCIA.app.n8n.cloud/webhook",
+    "rutas": {
+      "disponibilidad": "siena-pruebas/disponibilidad",
+      "reservar": "siena-pruebas/reservar",
+      "gestionar": "siena-pruebas/gestionar"
+    },
+    "origenesPermitidos": [
+      "https://sofiachavarriaparra-create.github.io",
+      "http://localhost:8000",
+      "http://127.0.0.1:8000"
+    ]
+  },
+  "google": {
+    "apiBase": "https://www.googleapis.com/calendar/v3",
+    "credencial": "Google Calendar PRUEBAS Siena",
+    "timeoutMs": 8000
+  },
+  "tablas": {
+    "reservas": "siena_pruebas_reservas",
+    "avisos": "siena_pruebas_avisos",
+    "candados": "siena_pruebas_candados"
+  },
+  "profesionales": [
+    {
+      "id": "prof-prueba-1",
+      "nombre": "Profesional de prueba 1",
+      "calendarId": "REEMPLAZAR_calendario_de_pruebas_1@group.calendar.google.com",
+      "activo": true
+    },
+    {
+      "id": "prof-prueba-2",
+      "nombre": "Profesional de prueba 2",
+      "calendarId": "REEMPLAZAR_calendario_de_pruebas_2@group.calendar.google.com",
+      "activo": true,
+      "horario": {
+        "semana": {
+          "lun": [],
+          "mar": [["14:00", "19:00"]],
+          "mie": [["14:00", "19:00"]],
+          "jue": [["14:00", "19:00"]],
+          "vie": [["14:00", "19:00"]],
+          "sab": [["10:00", "14:00"]],
+          "dom": []
+        },
+        "descansos": {}
+      }
+    }
+  ],
+  "servicios": [
+    { "id": "srv-prueba-a", "nombre": "Servicio de prueba A (30 min)", "duracionMin": 30, "profesionales": ["prof-prueba-1", "prof-prueba-2"] },
+    { "id": "srv-prueba-b", "nombre": "Servicio de prueba B (60 min)", "duracionMin": 60, "profesionales": ["prof-prueba-1", "prof-prueba-2"] },
+    { "id": "srv-prueba-c", "nombre": "Servicio de prueba C (90 min)", "duracionMin": 90, "profesionales": ["prof-prueba-1"] }
+  ],
+  "horario": {
+    "_formato": "Tramos locales HH:mm en la zona horaria del entorno. Los descansos se restan de la jornada. Un servicio no puede atravesar un descanso.",
+    "semana": {
+      "lun": [["10:00", "19:00"]],
+      "mar": [["10:00", "19:00"]],
+      "mie": [["10:00", "19:00"]],
+      "jue": [["10:00", "19:00"]],
+      "vie": [["10:00", "19:00"]],
+      "sab": [["10:00", "14:00"]],
+      "dom": []
+    },
+    "descansos": {
+      "lun": [["13:00", "14:00"]],
+      "mar": [["13:00", "14:00"]],
+      "mie": [["13:00", "14:00"]],
+      "jue": [["13:00", "14:00"]],
+      "vie": [["13:00", "14:00"]]
+    },
+    "excepciones": [
+      { "fecha": "2026-12-25", "cerrado": true, "motivo": "Feriado de prueba" },
+      { "fecha": "2026-12-31", "tramos": [["10:00", "13:00"]], "motivo": "Jornada corta de prueba" }
+    ]
+  },
+  "reglas": {
+    "intervaloInicioMin": 15,
+    "tiempoEntreCitasMin": 10,
+    "anticipacionMinimaMin": 120,
+    "horizonteDias": 30,
+    "diasPorConsulta": 14,
+    "cambiosHastaHorasAntes": 3,
+    "maxReservasActivasPorTelefono": 3,
+    "_maxReservasActivasPorTelefono": "PENDIENTE: todavía no lo aplica ningún workflow."
+  },
+  "candado": {
+    "duracionMs": 60000,
+    "margenMinimoMs": 20000,
+    "_nota": "La ejecución del workflow tiene un tiempo máximo (executionTimeout) menor que duracionMs; ver README."
+  },
+  "limites": {
+    "disponibilidadPorMinutoIp": 30,
+    "reservasPor10MinIp": 6,
+    "gestionPor10MinIp": 20,
+    "tamanoMaximoCuerpo": 4000,
+    "saltosProxy": 1,
+    "_saltosProxy": "Cuántos valores desde la derecha de X-Forwarded-For agrega la infraestructura de confianza. Verificar en la instancia real antes de producción."
+  },
+  "notificaciones": {
+    "enviosExternosHabilitados": false,
+    "recordatorioHorasAntes": 24,
+    "maxIntentos": 3,
+    "salon": { "email": "pruebas-salon@example.com" },
+    "email": {
+      "habilitado": false,
+      "destinatariosAutorizados": ["pruebas-salon@example.com", "pruebas-cliente@example.com"],
+      "credencialGmail": "Gmail PRUEBAS Siena"
+    },
+    "whatsapp": {
+      "habilitado": false,
+      "motivo": "Sin acceso oficial a WhatsApp Business Platform, sin consentimiento registrado ni plantillas aprobadas."
+    }
+  },
+  "web": {
+    "urlGestion": "https://sofiachavarriaparra-create.github.io/Elephant-Solutions/siena-reservas/web/"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "fecha": "2026-11-04T15:47:50.140Z",
+  "entorno": "n8n local (SQLite) + MOCK de Google Calendar; NO es Google real ni n8n Cloud",
+  "n8n": "2.46.6",
+  "node": "v24.22.2",
+  "resultados": [
+    {
+      "nombre": "Catálogo público sin datos internos",
+      "ok": true,
+      "ms": 67,
+      "detalle": "3 servicios de prueba, 66 ms"
+    },
+    {
+      "nombre": "Disponibilidad: sin datos de eventos existentes y con hora ocupada excluida",
+      "ok": true,
+      "ms": 117,
+      "detalle": "23 horarios libres el 2026-11-09"
+    },
+    {
+      "nombre": "Reserva válida: un único evento, reserva registrada y avisos creados",
+      "ok": true,
+      "ms": 709,
+      "detalle": "reserva r06e3911885f8939e6ee3f1d, 701 ms, candado liberado=true"
+    },
+    {
+      "nombre": "Horario ocupado (evento existente en la agenda) → 409",
+      "ok": true,
+      "ms": 114
+    },
+    {
+      "nombre": "Horario ocupado por otra reserva (incluye tiempo entre citas) → 409",
+      "ok": true,
+      "ms": 106
+    },
+    {
+      "nombre": "Horario pasado → 409 hora_pasada",
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "nombre": "Fuera de jornada (09:00 y domingo) → 409 fuera_de_horario",
+      "ok": true,
+      "ms": 130
+    },
+    {
+      "nombre": "Duración que atraviesa el descanso (90 min a las 12:00) → 409 cruza_descanso",
+      "ok": true,
+      "ms": 55
+    },
+    {
+      "nombre": "Entrada inválida y trampa anti-bots → 400 sin detalles internos",
+      "ok": true,
+      "ms": 146,
+      "detalle": "campos rechazados: (no expuestos)"
+    },
+    {
+      "nombre": "Dos solicitudes simultáneas al mismo intervalo → exactamente una reserva",
+      "ok": true,
+      "ms": 835,
+      "detalle": "estados 201/409, intentos 2+1, eventos=1"
+    },
+    {
+      "nombre": "Ocho solicitudes simultáneas (distinta clave, mismo intervalo) → exactamente una",
+      "ok": true,
+      "ms": 1882,
+      "detalle": "201=1, 409=7, eventos=1, intentos totales 15"
+    },
+    {
+      "nombre": "Doble clic y reintento con la misma clave → una sola reserva y misma respuesta",
+      "ok": true,
+      "ms": 865,
+      "detalle": "estados 201/200/200; misma clave con otros datos → 409"
+    },
+    {
+      "nombre": "Falla de Google Calendar al crear → 503 reintentable, sin evento; el reintento crea uno solo",
+      "ok": true,
+      "ms": 699,
+      "detalle": "la interfaz recibe error, no confirmación; luego 201 con un evento"
+    },
+    {
+      "nombre": "Respuesta perdida de Google (aplica y corta la conexión) → el reintento adopta el mismo evento",
+      "ok": true,
+      "ms": 632,
+      "detalle": "sin evento duplicado"
+    },
+    {
+      "nombre": "Tiempo de espera de Google (demora > timeout) → 503 en tiempo acotado",
+      "ok": true,
+      "ms": 4129,
+      "detalle": "4128 ms"
+    },
+    {
+      "nombre": "Candado ocupado por otra ejecución → 503 reintentable; vencido → se recupera",
+      "ok": true,
+      "ms": 591
+    },
+    {
+      "nombre": "Profesional \"cualquiera\": asigna una libre",
+      "ok": true,
+      "ms": 319,
+      "detalle": "asignada: Profesional de prueba 1"
+    },
+    {
+      "nombre": "Consultar y cancelar con enlace seguro; token inválido y reserva ajena → 404",
+      "ok": true,
+      "ms": 911,
+      "detalle": "token inválido, reserva ajena e inexistente responden igual (404)"
+    },
+    {
+      "nombre": "Reagendar: falla de Google conserva la cita original; hora ocupada → 409; luego éxito",
+      "ok": true,
+      "ms": 910,
+      "detalle": "original intacta tras la falla; luego movida y recordatorios rehechos"
+    },
+    {
+      "nombre": "Ronda de avisos: confirmaciones en vista previa (sin envío) con datos enmascarados",
+      "ok": true,
+      "ms": 1484,
+      "detalle": "[PRUEBA – mensaje demostrativo, no es una cita real] Hola P•••, tu hora quedó reservada: S…"
+    },
+    {
+      "nombre": "Notificación fallida (ruta email con nodo Gmail desactivado) → reserva intacta, se reintenta sin duplicar",
+      "ok": true,
+      "ms": 779,
+      "detalle": "aviso: pendiente(1) → pendiente(2) → fallido(3); reserva y evento intactos"
+    },
+    {
+      "nombre": "Recordatorio omitido si la cita se canceló o cambió directamente en la agenda",
+      "ok": true,
+      "ms": 1196,
+      "detalle": "cancelada → omitido_cancelada; movida → omitido_horario_cambiado + nuevo recordatorio"
+    },
+    {
+      "nombre": "Límite de uso por IP en disponibilidad → 429",
+      "ok": true,
+      "ms": 2000,
+      "detalle": "200×40, luego 429"
+    },
+    {
+      "nombre": "CORS: origen permitido recibe cabecera; origen ajeno no",
+      "ok": true,
+      "ms": 9,
+      "detalle": "permitido=http://localhost:8000, ajeno=https://sofiachavarriaparra-create.github.io"
+    },
+    {
+      "nombre": "Respuestas públicas sin secretos ni datos personales",
+      "ok": true,
+      "ms": 1,
+      "detalle": "103 respuestas revisadas"
+    },
+    {
+      "nombre": "Candados liberados al terminar",
+      "ok": true,
+      "ms": 0
+    }
+  ]
+}

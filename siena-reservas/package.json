@@ -1,0 +1,16 @@
+{
+  "name": "siena-reservas-pruebas",
+  "private": true,
+  "description": "MVP de PRUEBAS del sistema de reservas (web → n8n → Google Calendar → avisos). Datos ficticios.",
+  "scripts": {
+    "build": "node scripts/build-workflows.mjs",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:secretos": "node scripts/check-secrets.mjs",
+    "mock": "node tests/mock/google-calendar-mock.mjs",
+    "test:integracion": "node tests/integracion/run-local-n8n.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10",
+    "luxon": "3.7.2"
+  }
+}

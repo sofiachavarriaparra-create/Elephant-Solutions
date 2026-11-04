@@ -1,0 +1,96 @@
+{
+  "fecha": "2026-11-04T15:40:25.008Z",
+  "entorno": "Chromium + n8n local + MOCK",
+  "resultados": [
+    {
+      "n": "[escritorio] aviso de pruebas visible",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[escritorio] días y horarios cargados desde n8n",
+      "ok": true,
+      "d": "14 días"
+    },
+    {
+      "n": "[escritorio] hora tomada por otra persona → aviso de conflicto, sin confirmación",
+      "ok": true,
+      "d": "10:00 (viernes 6 de noviembre)"
+    },
+    {
+      "n": "[escritorio] horarios recargados y la hora tomada ya no aparece",
+      "ok": true,
+      "d": "27 horas libres"
+    },
+    {
+      "n": "[escritorio] muestra \"Reintentando…\" mientras repite con la misma clave",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[escritorio] tras fallar Google: error recuperable, sin confirmación",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[escritorio] \"Reintentar\" confirma solo cuando existe el evento (uno)",
+      "ok": true,
+      "d": "eventos 1→2"
+    },
+    {
+      "n": "[escritorio] confirmación indica que los avisos son demostrativos",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[escritorio] enlace de gestión con token en el fragmento (#)",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[gestión] la clave desaparece de la barra de direcciones",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[gestión] cancelación confirmada por el servidor",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[gestión] enlace alterado → \"no es válido\"",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[escritorio] sin errores de JavaScript",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[móvil] aviso de pruebas visible",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[móvil] días y horarios cargados desde n8n",
+      "ok": true,
+      "d": "14 días"
+    },
+    {
+      "n": "[móvil] reserva confirmada y sin desplazamiento horizontal",
+      "ok": true,
+      "d": "desborde 0px"
+    },
+    {
+      "n": "[móvil] sin errores de JavaScript",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "[sin backend] la agenda se presenta como simulación local",
+      "ok": true,
+      "d": ""
+    }
+  ]
+}

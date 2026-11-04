@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-11-04T15:36:48.208Z",
+  "entorno": "n8n local (SQLite) + MOCK de Google Calendar; NO es Google real ni n8n Cloud",
+  "n8n": "2.46.6",
+  "node": "v24.22.2",
+  "resultados": [
+    {
+      "nombre": "Dos solicitudes simultáneas al mismo intervalo → exactamente una reserva",
+      "ok": false,
+      "ms": 894,
+      "detalle": "estados 201,201 eventos 2 | {\"ok\":true,\"reserva\":{\"reserva\":\"r67ed312b078a5b70c7c97eb\",\"estado\":\"confirmada\",\"servicio\":\"Servicio de prueba A (30 min)\",\"profesional\":\"Profesional de prueba 1\",\"inicio\":\"2026-11-10T18:00:00.000Z\",\"fecha\":\"2026-11-10\",\"fechaLarga\":\"martes 10 de noviembre\",\"hora\":\"15:00\",\"servicioId\":\"srv-prueba-a\",\"profesionalId\":\"prof-prueba-1\",\"entornoDePruebas\":true,\"avisos\":\"segun_configuracion\"}} | {\"ok\":true,\"reserva\":{\"reserva\":\"r9cc03494c6ffd173385a5c4\",\"estado\":\"confirmada\",\"servicio\":\"Servicio de prueba A (30 min)\",\"profesional\":\"Profesional de prueba 1\",\"inicio\":\"2026-11-10T18:00:00.000Z\",\"fecha\":\"2026-11-10\",\"fechaLarga\":\"martes 10 de noviembre\",\"hora\":\"15:00\",\"servicioId\":\"srv-prueba-a\",\"profesionalId\":\"prof-prueba-1\",\"entornoDePruebas\":true,\"avisos\":\"segun_configuracion\"}}"
+    },
+    {
+      "nombre": "Ocho solicitudes simultáneas (distinta clave, mismo intervalo) → exactamente una",
+      "ok": false,
+      "ms": 1977,
+      "detalle": "201=6 409=2 eventos=6 otros="
+    }
+  ]
+}
