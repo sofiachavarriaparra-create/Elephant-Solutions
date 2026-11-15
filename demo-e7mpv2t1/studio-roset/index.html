@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Peluquería Studio Roset — demostración Elephant Solutions</title>
+  <style>
+    :root {
+      --fondo: #F6EFE8;
+      --superficie: #FFFBF7;
+      --texto: #2A1C19;
+      --texto-suave: #6B534C;
+      --primario: #7A3040;
+      --primario-oscuro: #5C2430;
+      --primario-texto: #FFFBF7;
+      --acento: #C4A06A;
+      --borde: #E8D9CC;
+      --aviso: #7A4E10;
+      --aviso-fondo: #F8E7C8;
+      --hero-fondo: #4A242C;
+      --hero-texto: #FFF8F2;
+      --hero-suave: #E8D0C4;
+      --ejemplo: #6B534C;
+      --ejemplo-fondo: #F3E6D8;
+      --radio: 18px;
+      --sombra: 0 10px 30px rgba(42, 28, 25, 0.08);
+      --fuente: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", "Helvetica Neue", system-ui, -apple-system, Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--sans);
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.55;
+      font-size: 16px;
+      padding-bottom: 88px;
+    }
+    img { max-width: 100%; }
+    a { color: var(--primario); }
+    .cinta-demo {
+      background: var(--aviso-fondo);
+      color: var(--aviso);
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--acento);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+    }
+    .marca {
+      font-family: var(--fuente);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .marca small {
+      display: block;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--texto-suave);
+      margin-top: 0.15rem;
+    }
+    .chip, .chip-falso {
+      display: inline-block;
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--texto-suave);
+      text-decoration: none;
+      background: var(--superficie);
+    }
+    .hero {
+      margin: 0 1rem 1.5rem;
+      background: var(--hero-fondo);
+      color: var(--hero-texto);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+    }
+    .foto-placeholder {
+      min-height: 210px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(196, 160, 106, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(255, 251, 247, 0.12), transparent 40%),
+        linear-gradient(160deg, #6a3340 0%, #3d1c24 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .foto-etiqueta {
+      font-size: 0.75rem;
+      background: rgba(255, 251, 247, 0.14);
+      border: 1px dashed rgba(255, 251, 247, 0.45);
+      color: var(--hero-suave);
+      padding: 0.45rem 0.7rem;
+      border-radius: 10px;
+    }
+    .hero-cuerpo { padding: 1.4rem 1.25rem 1.6rem; }
+    .hero-cuerpo p.bajada {
+      color: var(--hero-suave);
+      margin: 0 0 1.2rem;
+      font-size: 1.02rem;
+    }
+    h1 {
+      font-family: var(--fuente);
+      font-size: 2.05rem;
+      line-height: 1.15;
+      margin: 0 0 0.7rem;
+      font-weight: 700;
+    }
+    .boton-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      background: var(--acento);
+      color: #2A1C19;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 0.8rem 1.2rem;
+      border: 0;
+    }
+    .boton-cta:active { transform: translateY(1px); }
+    .boton-desactivado {
+      opacity: 0.7;
+      background: #d9c7b0;
+    }
+    .wa-numero {
+      text-align: center;
+      color: var(--hero-suave);
+      font-size: 0.85rem;
+      margin: 0.6rem 0 0;
+    }
+    main { padding: 0 1rem 2rem; }
+    section {
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      padding: 1.25rem 1.15rem 1.35rem;
+      margin: 0 0 1rem;
+      box-shadow: 0 1px 0 rgba(42, 28, 25, 0.03);
+    }
+    h2 {
+      font-family: var(--fuente);
+      font-size: 1.45rem;
+      margin: 0 0 0.85rem;
+    }
+    .servicios-grid { display: grid; gap: 0.75rem; }
+    .servicio {
+      border: 1px solid var(--borde);
+      border-left: 4px solid var(--acento);
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      background: #fffdfa;
+    }
+    .servicio h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+    .servicio p { margin: 0; color: var(--texto-suave); font-size: 0.95rem; }
+    .pasos { list-style: none; margin: 0; padding: 0; }
+    .pasos li {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.75rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--borde);
+    }
+    .pasos li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .paso-num {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--primario);
+      color: var(--primario-texto);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .pasos h3 { margin: 0 0 0.15rem; font-size: 1rem; }
+    .pasos p { margin: 0; color: var(--texto-suave); font-size: 0.92rem; }
+    .dato-pendiente {
+      display: inline-block;
+      background: var(--aviso-fondo);
+      color: var(--aviso);
+      border: 1px dashed var(--acento);
+      border-radius: 8px;
+      padding: 0.15rem 0.45rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+    .placeholder-bloque {
+      border: 1px dashed var(--acento);
+      background: var(--aviso-fondo);
+      color: var(--aviso);
+      border-radius: 12px;
+      padding: 0.85rem 0.95rem;
+    }
+    .placeholder-bloque p { margin: 0.4rem 0 0; font-weight: 400; color: var(--texto-suave); }
+    .sello-ejemplo {
+      display: inline-block;
+      background: var(--ejemplo-fondo);
+      color: var(--ejemplo);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    .rating { margin-bottom: 0.9rem; }
+    .rating-nota {
+      font-family: var(--fuente);
+      font-size: 2rem;
+      margin: 0 0 0.2rem;
+    }
+    .rating p:last-child { margin: 0; color: var(--texto-suave); font-size: 0.92rem; }
+    .reseña-ejemplo {
+      background: var(--ejemplo-fondo);
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      color: var(--ejemplo);
+    }
+    .reseña-ejemplo p { margin: 0.35rem 0 0; }
+    .direccion { margin: 0 0 0.35rem; font-weight: 600; }
+    .meta-linea { margin: 0.35rem 0 0; color: var(--texto-suave); }
+    .horario-texto, .horario-lista { margin: 0.3rem 0 0.8rem; padding: 0; }
+    .horario-lista { list-style: none; }
+    .horario-lista li { margin: 0.2rem 0; }
+    .link-texto { display: inline-block; margin-top: 0.5rem; font-weight: 600; }
+    .contacto-fila { margin-top: 0.8rem; }
+    footer {
+      margin: 0.5rem 1rem 0;
+      padding: 1.1rem 0.2rem 0.4rem;
+      text-align: center;
+      color: var(--texto-suave);
+      font-size: 0.82rem;
+    }
+    footer p { margin: 0.35rem 0; }
+    .barra-cta {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      background: rgba(246, 239, 232, 0.94);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--borde);
+      padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+    }
+    .boton-barra { box-shadow: 0 6px 16px rgba(122, 48, 64, 0.18); }
+    @media (min-width: 720px) {
+      body { font-size: 17px; }
+      .contenedor, header, main, .cinta-demo, .barra-cta, footer, .hero { max-width: 720px; margin-left: auto; margin-right: auto; }
+      .hero { margin-top: 0.4rem; }
+      .servicios-grid { grid-template-columns: 1fr 1fr 1fr; }
+      h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cinta-demo">Demostración preparada por Elephant Solutions — no es el sitio oficial del negocio</div>
+  <header>
+    <div class="marca">Peluquería Studio Roset<small>Macul · Peluquería y estética</small></div>
+  </header>
+  <section class="hero" aria-label="Portada">
+    <div class="foto-placeholder" role="img" aria-label="Espacio para una foto real del local. Por completar.">
+      <span class="foto-etiqueta">Espacio para una foto real del local. Por completar.</span>
+    </div>
+    <div class="hero-cuerpo">
+      <h1>Peluquería Studio Roset</h1>
+      <p class="bajada">Peluquería y estética en Macul. Conoce los servicios y agenda tu hora por WhatsApp.</p>
+      <a class="boton-cta" href="https://wa.me/56974010310?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Peluquer%C3%ADa%20Studio%20Roset.">Agenda por WhatsApp</a><p class="wa-numero">+56 9 7401 0310</p>
+    </div>
+  </section>
+  <main>
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="servicios-grid">
+<article class="servicio"><h3>Peluquería</h3><p><span class="dato-pendiente">Detalle por completar</span></p></article>
+<article class="servicio"><h3>Estética</h3><p><span class="dato-pendiente">Detalle por completar</span></p></article>
+<article class="servicio"><h3>Uñas</h3><p><span class="dato-pendiente">Detalle por completar</span></p></article>
+</div>
+    </section>
+    <section id="agendar">
+      <h2>Cómo agendar por WhatsApp</h2>
+      <p>Un asistente de Elephant Solutions atiende el primer mensaje. El equipo del negocio confirma la hora. Siempre puedes pedir hablar con una persona.</p>
+      <ol class="pasos">
+        <li>
+          <span class="paso-num">1</span>
+          <div>
+            <h3>Te pedimos tu consentimiento</h3>
+            <p>Antes de guardar tus datos, el asistente te pregunta si aceptas continuar por WhatsApp.</p>
+          </div>
+        </li>
+        <li>
+          <span class="paso-num">2</span>
+          <div>
+            <h3>Deja tu nombre, el servicio y el horario que te acomoda</h3>
+            <p>Con eso el equipo tiene lo necesario para buscar un espacio, sin pedirte datos de más.</p>
+          </div>
+        </li>
+        <li>
+          <span class="paso-num">3</span>
+          <div>
+            <h3>El equipo confirma tu hora</h3>
+            <p>La reserva no queda cerrada hasta que una persona del negocio la confirme.</p>
+          </div>
+        </li>
+        <li>
+          <span class="paso-num">4</span>
+          <div>
+            <h3>Si prefieres una persona, solo dilo</h3>
+            <p>En cualquier momento puedes pedir que te atienda alguien del equipo, no el asistente.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section id="reseñas">
+      <h2>Lo que dicen en Google</h2>
+      <div class="rating"><p class="rating-nota">4,8</p><p>Calificación pública en Google, a partir de 65 reseñas (Google, consultado el 11 de noviembre de 2026).</p></div>
+      <div class="reseña-ejemplo">
+        <span class="sello-ejemplo">Ejemplo de demostración</span>
+        <p>Aquí se mostraría un comentario real del negocio, solo si el cliente lo autoriza. Este texto es un marcador de posición y no corresponde a un cliente ni a una reseña verdadera.</p>
+      </div>
+    </section>
+    <section id="ubicacion">
+      <h2>Dónde estamos y horarios</h2>
+      <p class='direccion'>Av. Macul 3998</p>
+      <a class="link-texto" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Macul+3998,+Macul" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+      <div class="contacto-fila"><div class="placeholder-bloque" role="note"><span class="dato-pendiente">Horario por confirmar</span><p>El horario no quedó registrado en la ficha pública usada para esta demostración.</p></div></div>
+      <div class="contacto-fila"><p class="meta-linea"><span class="dato-pendiente">Tiene Instagram público; el usuario no quedó registrado en la ficha</span></p></div>
+    </section>
+  </main>
+  <footer>
+    <p>Demostración preparada por Elephant Solutions — no es el sitio oficial del negocio.</p>
+    <p>Datos públicos al 11 de noviembre de 2026, registrados en las páginas «Cola de contactos — 12 nov» y «Flujo automatizado Elephant — plan y plazos». No se inventaron horarios, precios, reseñas ni datos de contacto.</p>
+  </footer>
+  <div class="barra-cta"><a class="boton-cta boton-barra" href="https://wa.me/56974010310?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Peluquer%C3%ADa%20Studio%20Roset.">Agenda por WhatsApp</a></div>
+</body>
+</html>

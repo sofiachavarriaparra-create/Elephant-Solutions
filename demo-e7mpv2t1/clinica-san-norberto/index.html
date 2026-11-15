@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Clínica Dental San Norberto — demostración Elephant Solutions</title>
+  <style>
+    :root {
+      --fondo: #F3F7F8;
+      --superficie: #FFFFFF;
+      --texto: #14333A;
+      --texto-suave: #4A6670;
+      --primario: #0F4C5C;
+      --primario-oscuro: #0A3540;
+      --primario-texto: #F4FBFC;
+      --acento: #1A7A6D;
+      --borde: #D5E2E6;
+      --aviso: #1E4D5A;
+      --aviso-fondo: #D7EEF2;
+      --hero-fondo: #0F4C5C;
+      --hero-texto: #F4FBFC;
+      --hero-suave: #C5DDE3;
+      --ejemplo: #4A6670;
+      --ejemplo-fondo: #E6F1F3;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", system-ui, -apple-system, Roboto, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.55;
+      font-size: 16px;
+      padding-bottom: 92px;
+    }
+    a { color: var(--acento); }
+    .cinta-demo {
+      background: var(--aviso-fondo);
+      color: var(--aviso);
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--borde);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.2rem;
+      background: var(--superficie);
+    }
+    .marca {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      color: var(--primario);
+    }
+    .marca small {
+      display: block;
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: var(--texto-suave);
+      margin-top: 0.15rem;
+      letter-spacing: 0.04em;
+    }
+    .hero {
+      margin: 1rem;
+      background: linear-gradient(180deg, var(--hero-fondo) 0%, var(--primario-oscuro) 100%);
+      color: var(--hero-texto);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    .foto-placeholder {
+      min-height: 180px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(26, 122, 109, 0.45), transparent 42%),
+        linear-gradient(135deg, rgba(255,255,255,0.06), transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem 1.2rem;
+    }
+    .foto-etiqueta {
+      font-size: 0.75rem;
+      background: rgba(15, 76, 92, 0.45);
+      border: 1px dashed rgba(244, 251, 252, 0.45);
+      color: var(--hero-suave);
+      padding: 0.45rem 0.7rem;
+      border-radius: 10px;
+    }
+    .hero-cuerpo { padding: 1.35rem 1.25rem 1.5rem; }
+    h1 { font-size: 1.95rem; line-height: 1.2; margin: 0 0 0.65rem; font-weight: 700; letter-spacing: -0.03em; }
+    .hero .bajada { color: var(--hero-suave); margin: 0 0 1.15rem; }
+    .boton-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      background: #E8F6F3;
+      color: var(--primario-oscuro);
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 14px;
+      padding: 0.8rem 1.2rem;
+    }
+    .boton-desactivado { background: #c5dde3; color: var(--texto-suave); }
+    .wa-numero { text-align: center; color: var(--hero-suave); font-size: 0.85rem; margin: 0.55rem 0 0; }
+    main { padding: 0 1rem 2rem; }
+    section {
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: 20px;
+      padding: 1.25rem 1.15rem 1.35rem;
+      margin: 0 0 0.9rem;
+    }
+    h2 { font-size: 1.3rem; margin: 0 0 0.8rem; color: var(--primario); letter-spacing: -0.02em; }
+    .servicios-grid { display: grid; gap: 0.7rem; }
+    .servicio {
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 0.95rem 1rem;
+      background: #f7fbfc;
+    }
+    .servicio h3 { margin: 0 0 0.25rem; font-size: 1.05rem; color: var(--primario); }
+    .servicio p { margin: 0; color: var(--texto-suave); font-size: 0.95rem; }
+    .pasos { list-style: none; margin: 0; padding: 0; }
+    .pasos li {
+      display: grid;
+      grid-template-columns: 2.1rem 1fr;
+      gap: 0.75rem;
+      padding: 0.7rem 0;
+    }
+    .paso-num {
+      width: 2.1rem; height: 2.1rem;
+      border-radius: 50%;
+      background: #E8F6F3;
+      color: var(--acento);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800;
+      border: 2px solid var(--acento);
+    }
+    .pasos h3 { margin: 0 0 0.15rem; font-size: 1rem; }
+    .pasos p { margin: 0; color: var(--texto-suave); font-size: 0.92rem; }
+    .dato-pendiente {
+      display: inline-block;
+      background: var(--aviso-fondo);
+      color: var(--aviso);
+      border: 1px dashed var(--acento);
+      border-radius: 8px;
+      padding: 0.15rem 0.45rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+    .placeholder-bloque {
+      border: 1px dashed var(--acento);
+      background: var(--aviso-fondo);
+      color: var(--aviso);
+      border-radius: 14px;
+      padding: 0.85rem 0.95rem;
+    }
+    .placeholder-bloque p { margin: 0.4rem 0 0; font-weight: 400; color: var(--texto-suave); }
+    .sello-ejemplo {
+      display: inline-block;
+      background: var(--ejemplo-fondo);
+      color: var(--acento);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+    .rating-nota { font-size: 2rem; font-weight: 700; color: var(--primario); margin: 0 0 0.2rem; }
+    .rating p:last-child { margin: 0; color: var(--texto-suave); font-size: 0.92rem; }
+    .reseña-ejemplo { background: var(--ejemplo-fondo); border-radius: 14px; padding: 0.9rem 1rem; color: var(--ejemplo); }
+    .reseña-ejemplo p { margin: 0.35rem 0 0; }
+    .direccion { margin: 0 0 0.35rem; font-weight: 600; }
+    .meta-linea { margin: 0.35rem 0 0; color: var(--texto-suave); }
+    .horario-texto, .horario-lista { margin: 0.3rem 0 0.8rem; padding: 0; list-style: none; }
+    .link-texto { display: inline-block; margin-top: 0.5rem; font-weight: 600; }
+    .contacto-fila { margin-top: 0.8rem; }
+    footer {
+      margin: 0.4rem 1rem 0;
+      padding: 1rem 0.2rem 0.3rem;
+      text-align: center;
+      color: var(--texto-suave);
+      font-size: 0.82rem;
+    }
+    footer p { margin: 0.35rem 0; }
+    .barra-cta {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      background: rgba(243, 247, 248, 0.95);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--borde);
+      padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+    }
+    .boton-barra {
+      background: var(--primario);
+      color: var(--primario-texto);
+    }
+    @media (min-width: 720px) {
+      header, .cinta-demo, .hero, main, footer, .barra-cta { max-width: 720px; margin-left: auto; margin-right: auto; }
+      .servicios-grid { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cinta-demo">Demostración preparada por Elephant Solutions — no es el sitio oficial del negocio</div>
+  <header>
+    <div class="marca">Clínica Dental San Norberto<small>Macul · Clínica dental</small></div>
+  </header>
+  <section class="hero" aria-label="Portada">
+    <div class="foto-placeholder" role="img" aria-label="Espacio para una foto real del local. Por completar.">
+      <span class="foto-etiqueta">Espacio para una foto real del local. Por completar.</span>
+    </div>
+    <div class="hero-cuerpo">
+      <h1>Clínica Dental San Norberto</h1>
+      <p class="bajada">Clínica dental en Macul. Conoce los servicios y agenda tu hora por WhatsApp.</p>
+      <a class="boton-cta" href="https://wa.me/56988808279?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Cl%C3%ADnica%20Dental%20San%20Norberto.">Agenda por WhatsApp</a><p class="wa-numero">+56 9 8880 8279</p>
+    </div>
+  </section>
+  <main>
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="placeholder-bloque" role="note"><strong>Listado de servicios por completar.</strong><p>No hay un listado público registrado. Acá irían los servicios reales del negocio, sin precios inventados.</p></div>
+    </section>
+    <section id="agendar">
+      <h2>Cómo agendar por WhatsApp</h2>
+      <p>Un asistente de Elephant Solutions atiende el primer mensaje. El equipo confirma la hora. Siempre puedes pedir hablar con una persona.</p>
+      <ol class="pasos">
+        <li>
+          <span class="paso-num">1</span>
+          <div>
+            <h3>Te pedimos tu consentimiento</h3>
+            <p>Antes de guardar tus datos, el asistente te pregunta si aceptas continuar por WhatsApp.</p>
+          </div>
+        </li>
+        <li>
+          <span class="paso-num">2</span>
+          <div>
+            <h3>Deja tu nombre, el servicio y el horario que te acomoda</h3>
+            <p>Con eso el equipo tiene lo necesario para buscar un espacio, sin pedirte datos de más.</p>
+          </div>
+        </li>
+        <li>
+          <span class="paso-num">3</span>
+          <div>
+            <h3>El equipo confirma tu hora</h3>
+            <p>La reserva no queda cerrada hasta que una persona del negocio la confirme.</p>
+          </div>
+        </li>
+        <li>
+          <span class="paso-num">4</span>
+          <div>
+            <h3>Si prefieres una persona, solo dilo</h3>
+            <p>En cualquier momento puedes pedir que te atienda alguien del equipo, no el asistente.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section id="reseñas">
+      <h2>Lo que dicen en Google</h2>
+      <div class="rating"><p class="rating-nota">5,0</p><p>Calificación pública en Google, a partir de 13 reseñas (Google, consultado el 11 de noviembre de 2026).</p></div>
+      <div class="reseña-ejemplo">
+        <span class="sello-ejemplo">Ejemplo de demostración</span>
+        <p>Aquí se mostraría un comentario real del negocio, solo si el cliente lo autoriza. Este texto es un marcador de posición y no corresponde a un cliente ni a una reseña verdadera.</p>
+      </div>
+    </section>
+    <section id="ubicacion">
+      <h2>Dónde estamos y horarios</h2>
+      <p class='direccion'>Vía Láctea, Macul</p><p class='meta-linea'><span class="dato-pendiente">El número de calle no quedó registrado en la ficha usada para esta demostración</span></p>
+      <a class="link-texto" href="https://www.google.com/maps/search/?api=1&amp;query=Vía+Láctea,+Macul" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+      <div class="contacto-fila"><div class="placeholder-bloque" role="note"><span class="dato-pendiente">Horario por confirmar</span><p>El horario no quedó registrado en la ficha pública usada para esta demostración.</p></div></div>
+      <div class="contacto-fila"><p class="meta-linea"><span class="dato-pendiente">Sin Instagram público hallado en la ficha registrada</span></p></div>
+    </section>
+  </main>
+  <footer>
+    <p>Demostración preparada por Elephant Solutions — no es el sitio oficial del negocio.</p>
+    <p>Datos públicos al 11 de noviembre de 2026, registrados en las páginas «Cola de contactos — 12 nov» y «Flujo automatizado Elephant — plan y plazos». No se inventaron horarios, precios, reseñas ni datos de contacto.</p>
+  </footer>
+  <div class="barra-cta"><a class="boton-cta boton-barra" href="https://wa.me/56988808279?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Cl%C3%ADnica%20Dental%20San%20Norberto.">Agenda por WhatsApp</a></div>
+</body>
+</html>
