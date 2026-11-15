@@ -612,6 +612,8 @@ p { margin: 0; }
 .legal h2 { margin-top: 16px; font-size: 22px; letter-spacing: -0.01em; color: #FFFFFF; }
 .legal p { font-size: 16px; line-height: 1.7; }
 .legal .legal__date { font-size: 14px; color: var(--text-muted); }
+.legal ul { margin: 0; padding-left: 1.25em; display: flex; flex-direction: column; gap: 10px; }
+.legal li { font-size: 16px; line-height: 1.7; }
 .legal .label::before { display: none; }
 
 /* ---------- Responsive ---------- */
